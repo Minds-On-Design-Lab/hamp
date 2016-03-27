@@ -4,3 +4,24 @@
 ---
 
 @import "bootstrap/bootstrap";
+
+
+#logo {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: $gray;
+  padding: $spacer;
+}
+
+#menu {
+  position: fixed;
+  top: 0px;
+  right:0px;
+  padding: $spacer;
+}
+
+
+.section-full {
+  height: 100vh;
+}

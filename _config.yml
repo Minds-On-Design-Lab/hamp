@@ -3,31 +3,37 @@ title: Healthy Affordable Materials Project
 url: http://hamp.siteleaf.net
 timezone: UTC
 collections:
-  news:
-    title: News
-    output: true
   partners:
     title: Partners
     output: false
-  posts:
-    title: Posts
-    output: true
   projects:
     title: Projects
-    output: true
+    output: false
+  news:
+    title: News
+    output: false
   uploads:
     title: Uploads
-    output: true
+    output: false
+
 defaults:
 - scope:
     path: ''
-    type: posts
+    type: partners
   values:
-    layout: post
-    permalink: "/posts/:title/"
+    image:
+    link:
 - scope:
     path: ''
-    type: pages
+    type: projects
   values:
-    layout: page
+    partner:
+    image:
+    link:
+- scope:
+    path: ''
+    type: news
+  values:
+    partner:
+    link:
 permalink: pretty
