@@ -15,7 +15,6 @@ collections:
   uploads:
     title: Uploads
     output: false
-
 defaults:
 - scope:
     path: ''
@@ -35,5 +34,6 @@ defaults:
     type: news
   values:
     partner:
+    date:
     link:
 permalink: pretty

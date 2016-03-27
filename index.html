@@ -10,12 +10,18 @@ layout: default
 <section id="partners" class="section-full">
 
   <h2>Partners</h2>
-  <ul>
+  <ul class="media-list">
   {% for partner in site.partners %}
 
-    <li>
+    <li class="media">
 
-      {{ partner.title}}
+      <div class="media-left">
+        <img src="{{partner.image}}"/>
+      </div>
+
+      <h3>{{ partner.title}}</h3>
+
+      {{ partner.content }}
 
     </li>
 
@@ -27,12 +33,18 @@ layout: default
 <section id="projects" class="section-full">
 
   <h2>Projects</h2>
-  <ul>
-  {% for partner in site.projects %}
+  <ul class="media-list">
+  {% for project in site.projects %}
 
-    <li>
+    <li class="media">
 
-      {{ partner.title}}
+      <div class="media-left">
+        <img src="{{project.image}}"/>
+      </div>
+
+      <h3>{{ project.title}}</h3>
+
+      {{ project.content }}
 
     </li>
 
@@ -45,11 +57,15 @@ layout: default
 
   <h2>News</h2>
   <ul>
-  {% for partner in site.news %}
+  {% for news in site.news %}
 
     <li>
 
-      {{ partner.title}}
+      <h4>{{ project.date }}</h4>
+
+      <h3>{{ project.title}}</h3>
+
+
 
     </li>
 
