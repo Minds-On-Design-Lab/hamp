@@ -12,6 +12,9 @@ collections:
   projects:
     title: Projects
     output: false
+  slides:
+    title: Slides
+    output: true
   uploads:
     title: Uploads
     output: false
