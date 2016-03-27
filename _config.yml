@@ -3,12 +3,12 @@ title: Healthy Affordable Materials Project
 url: http://hamp.siteleaf.net
 timezone: UTC
 collections:
+  posts:
+    title: News
+    output: true
   partners:
     title: Partners
     output: false
-  posts:
-    title: Posts
-    output: true
   projects:
     title: Projects
     output: false
@@ -44,3 +44,6 @@ defaults:
   values:
     image: 
 permalink: pretty
+description: The healthy materials project is asdlk ajsdkl aklsd aklsj dklasj dkljas
+  kldj aklsjd lkasjd lkasj dlkjaslk djaslkd jklasj das
+image: "/uploads/bermaid.png"
