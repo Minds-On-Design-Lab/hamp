@@ -1,11 +1,15 @@
 ---
 layout: default
 ---
+{% for slide in site.slides %}
+<section id="slide-{{slide.id}}" class="section-full">
 
-<section id="intro">
+  <h1>{{ slide.title}}</h1>
 
+  {{ slide.content }}
 
 </section>
+{% endfor %}
 <section id="partners" class="section-full">
 
   <h2>Partners</h2>
