@@ -20,19 +20,19 @@ defaults:
     path: ''
     type: partners
   values:
-    image:
-    link:
+    image: 
+    link: 
 - scope:
     path: ''
     type: projects
   values:
-    partner:
-    image:
-    link:
+    partner: 
+    image: 
+    link: 
 - scope:
     path: ''
     type: posts
   values:
-    partner:
-    link:
+    partner: 
+    link: 
 permalink: pretty
