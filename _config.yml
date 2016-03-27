@@ -8,10 +8,7 @@ collections:
     output: false
   posts:
     title: Posts
-    output: false
-  slides:
-    title: Slides
-    output: false
+    output: true
   projects:
     title: Projects
     output: false
@@ -26,24 +23,24 @@ defaults:
     path: ''
     type: partners
   values:
-    image:
-    link:
+    image: 
+    link: 
 - scope:
     path: ''
     type: projects
   values:
-    partner:
-    image:
-    link:
+    partner: 
+    image: 
+    link: 
 - scope:
     path: ''
     type: posts
   values:
-    partner:
-    link:
+    partner: 
+    link: 
 - scope:
     path: ''
     type: slides
   values:
-    image:
+    image: 
 permalink: pretty
