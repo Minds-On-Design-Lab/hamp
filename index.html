@@ -56,14 +56,13 @@ layout: default
 
   <h2>News</h2>
   <ul>
-  {% for news in site.news %}
+  {% for post in site.posts %}
 
     <li>
 
-      <h4>{{ news.date }}</h4>
+      <h4>{{ post.date }}</h4>
 
-      <h3>{{ news.title}}</h3>
-
+      <h3>{{ post.title}}</h3>
 
 
     </li>
