@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+{% for slide in site.slides %}
+<section id="slide-{{slide.id}}" class="section-full">
+
+  <h1>{{ slide.title}}</h1>
+
+  {{ slide.content }}
+
+</section>
+{% endfor %}
+<section id="partners" class="section-full">
+
+  <h2>Partners</h2>
+  <ul class="media-list">
+  {% for partner in site.partners %}
+
+    <li class="media">
+
+      <div class="media-left">
+        <img src="{{partner.image}}"/>
+      </div>
+
+      <h3>{{ partner.title}}</h3>
+
+      {{ partner.content }}
+
+    </li>
+
+  {% endfor %}
+  </ul>
+</section>
+
+
+<section id="projects" class="section-full">
+
+  <h2>Projects</h2>
+  <ul class="media-list">
+  {% for project in site.projects %}
+
+    <li class="media">
+
+      <div class="media-left">
+        <img src="{{project.image}}"/>
+      </div>
+
+      <h3>{{ project.title}}</h3>
+
+      {{ project.content }}
+
+    </li>
+
+  {% endfor %}
+  </ul>
+</section>
+
+
+<section id="news" class="section-full">
+
+  <h2>News</h2>
+  <ul>
+  {% for post in site.posts %}
+
+    <li>
+
+      <h4>{{ post.date }}</h4>
+
+      <h3>{{ post.title}}</h3>
+
+
+    </li>
+
+  {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,21 @@
+{
+  "name": "hamp",
+  "homepage": "https://github.com/familiar-studio/hamp",
+  "authors": [
+    "Keith Mancuso <keithmancuso@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}
