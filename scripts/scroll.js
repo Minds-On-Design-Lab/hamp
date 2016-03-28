@@ -14,6 +14,9 @@ $(function () { // wait for document ready
       wipeAnimation.fromTo(slide, 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
     })
 
+
+
+
     var height = ($('.slide').length-1) * 100;
 		// create scene to pin and link animation
 		new ScrollMagic.Scene({
