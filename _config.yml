@@ -44,6 +44,7 @@ defaults:
     type: slides
   values:
     image: 
+    color: 
 permalink: pretty
 description: The healthy materials project is asdlk ajsdkl aklsd aklsj dklasj dkljas
   kldj aklsjd lkasjd lkasj dlkjaslk djaslkd jklasj das
