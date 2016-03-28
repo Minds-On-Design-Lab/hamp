@@ -5,7 +5,7 @@ timezone: UTC
 collections:
   posts:
     title: News
-    output: false
+    output: true
   partners:
     title: Partners
     output: false
@@ -23,27 +23,27 @@ defaults:
     path: ''
     type: partners
   values:
-    image:
-    fullName:
-    link:
+    image: 
+    fullName: 
+    link: 
 - scope:
     path: ''
     type: projects
   values:
-    partner:
-    image:
-    link:
+    partner: 
+    image: 
+    link: 
 - scope:
     path: ''
     type: posts
   values:
-    partner:
-    link:
+    partner: 
+    link: 
 - scope:
     path: ''
     type: slides
   values:
-    image:
+    image: 
 permalink: pretty
 description: The healthy materials project is asdlk ajsdkl aklsd aklsj dklasj dkljas
   kldj aklsjd lkasjd lkasj dlkjaslk djaslkd jklasj das
