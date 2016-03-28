@@ -5,23 +5,46 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta name="generator" content="Siteleaf, http://siteleaf.com" />
   <title>{{ site.title }}</title>
-  <link rel="canonical" href="{{permalink}}" />
-  <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+
+  <meta name="description" content="{{site.description}}">
+
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 </head>
 <body>
 
-  <div class="container">
 
+  <header id="header">
     <nav id="menu" class="pull-xs-right">Menu</nav>
-    <h1 id="logo">
-      <div>Healthy</div><div>Affordable</div><div>Materials</div> <div>Project</div>
-    </h1>
+
+    <div id="logo-wrapper">
+      <h1 id="logo">
+        <div>Healthy</div><div>Affordable</div><div>Materials</div> <div>Project</div>
+      </h1>
+      <h2 id="section-name">
+        Projects
+      </h2>
+    </div>
+  </header>
+
+
+
+
 
 
     {{ content }}
 
-  </div>
-  {{ page.footer_scripts }}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+
+  <script src="/scripts/scroll.js"></script>
+
+
 </body>
 </html>

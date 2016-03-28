@@ -24,6 +24,7 @@ defaults:
     type: partners
   values:
     image: 
+    fullName: 
     link: 
 - scope:
     path: ''
