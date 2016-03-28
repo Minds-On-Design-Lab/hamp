@@ -1,77 +1,90 @@
 ---
 layout: default
 ---
+<section id="slides" class="section-full">
 
 {% for slide in site.slides %}
-<section id="slide-{{slide.id}}" class="section-full">
+<div id="slide-{{forloop.index}}" class="slide" style="background-image:url('{{slide.image}}')" >
 
-  <h1>{{ slide.title}}</h1>
+  <div class="container">
 
-  {{ slide.content }}
+    <div class="card card-block">
+      <h1>{{ slide.title}}</h1>
 
-</section>
+      {{ slide.content }}
+    </div>
+  </div>
+</div>
 {% endfor %}
+</section>
 <section id="partners" class="section-full">
+  <div class="container">
 
-  <h2>Partners</h2>
-  <ul class="media-list">
-  {% for partner in site.partners %}
 
-    <li class="media">
+    <h2>Partners</h2>
+    <ul class="media-list">
+    {% for partner in site.partners %}
 
-      <div class="media-left">
-        <img src="{{partner.image}}"/>
-      </div>
+      <li class="media">
 
-      <h3>{{ partner.title}}</h3>
+        <div class="media-left">
+          <img src="{{partner.image}}"/>
+        </div>
 
-      {{ partner.content }}
+        <h3>{{ partner.title}}</h3>
 
-    </li>
+        {{ partner.content }}
 
-  {% endfor %}
-  </ul>
+      </li>
+
+    {% endfor %}
+    </ul>
+  </div>
 </section>
 
 
 <section id="projects" class="section-full">
+  <div class="container">
 
-  <h2>Projects</h2>
-  <ul class="media-list">
-  {% for project in site.projects %}
 
-    <li class="media">
+    <h2>Projects</h2>
+    <ul class="media-list">
+    {% for project in site.projects %}
 
-      <div class="media-left">
-        <img src="{{project.image}}"/>
-      </div>
+      <li class="media">
 
-      <h3>{{ project.title}}</h3>
+        <div class="media-left">
+          <img src="{{project.image}}"/>
+        </div>
 
-      {{ project.content }}
+        <h3>{{ project.title}}</h3>
 
-    </li>
+        {{ project.content }}
 
-  {% endfor %}
-  </ul>
+      </li>
+
+    {% endfor %}
+    </ul>
+  </div>
 </section>
 
 
 <section id="news" class="section-full">
+  <div class="container">
 
-  <h2>News</h2>
-  <ul>
-  {% for post in site.posts %}
+    <ul>
+    {% for post in site.posts %}
 
-    <li>
+      <li>
 
-      <h4>{{ post.date }}</h4>
+        <h4>{{ post.date }}</h4>
 
-      <h3>{{ post.title}}</h3>
+        <h3>{{ post.title}}</h3>
 
 
-    </li>
+      </li>
 
-  {% endfor %}
-  </ul>
+    {% endfor %}
+    </ul>
+  </div>
 </section>
