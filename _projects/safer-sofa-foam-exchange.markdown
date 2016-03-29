@@ -3,7 +3,7 @@ title: Safer Sofa Foam Exchange
 date: 2016-03-29 15:28:00 Z
 position: 3
 partner: GSPI
-image: "/uploads/sofa.png"
+image: "/uploads/safer-sofa.jpg"
 link: http://greensciencepolicy.org/safer-sofa/
 ---
 

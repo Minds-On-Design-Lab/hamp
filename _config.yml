@@ -23,31 +23,31 @@ defaults:
     path: ''
     type: partners
   values:
-    image: 
-    fullName: 
-    link: 
+    image:
+    fullName:
+    link:
 - scope:
     path: ''
     type: projects
   values:
-    partner: 
-    image: 
-    link: 
+    partner:
+    image:
+    link:
 - scope:
     path: ''
     type: posts
   values:
-    partner: 
-    link: 
+    partner:
+    link:
 - scope:
     path: ''
     type: slides
   values:
-    image: 
-    color: 
+    image:
+    color:
 permalink: pretty
 description: The Healthy Affordable Materials Project—a four-partner collaborative
   funded by The JPB Foundation—unites manufacturers, developers, research scientists,
   designers, and advocates in a push to replace existing materials with safer, more
   affordable alternatives.
-image: "/uploads/hamp-lockup.svg"
+image: "/uploads/hamp-lockup.png"
