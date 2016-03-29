@@ -6,7 +6,7 @@ layout: default
 
 {% for slide in site.slides %}
 <div id="slide-{{forloop.index}}" class="slide" style="
-background:
+background-image:
 linear-gradient(
    {{slide.color}},
    {{slide.color}}
@@ -32,15 +32,14 @@ linear-gradient(
     <ul class="media-list">
     {% for partner in site.partners %}
 
-      <li class="media">
+      <li class="row">
 
-        <div class="media-left">
-          <img src="{{partner.image}}"/>
+        <div class="col-md-4">
+          <img src="{{partner.image}}" class="img-responsive"/>
         </div>
-
-        <h3>{{ partner.title}}</h3>
-
-        {{ partner.content }}
+        <div class="col-md-8">
+          {{ partner.content }}
+        </div>
 
       </li>
 
@@ -55,18 +54,20 @@ linear-gradient(
 
 
     <h2>Projects</h2>
-    <ul class="media-list">
+    <ul class="media-list row">
     {% for project in site.projects %}
 
-      <li class="media">
+      <li class="media col-md-6">
 
         <div class="media-left">
-          <img src="{{project.image}}"/>
+          <img src="{{project.image}}" width="180px"/>
         </div>
+        <div class="media-body">
+          <h6>{{ project.partner}}</h6>
+          <h4>{{ project.title}}</h4>
 
-        <h3>{{ project.title}}</h3>
-
-        {{ project.content }}
+          {{ project.content }}
+        </div>
 
       </li>
 
@@ -84,7 +85,7 @@ linear-gradient(
 
       <li>
 
-        <h4>{{ post.date }}</h4>
+        <h6>{{ post.date }}</h6>
 
         <h3>{{ post.title}}</h3>
 

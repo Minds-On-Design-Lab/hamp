@@ -26,17 +26,17 @@
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 #373a3c !default;
-$gray:                      #55595c !default;
-$gray-light:                #818a91 !default;
-$gray-lighter:              #eceeef !default;
-$gray-lightest:             #f7f7f9 !default;
+$gray-dark:                 #2f2f2f !default;
+$gray:                      #42403c !default;
+$gray-light:                #53524D !default;
+$gray-lighter:              #696762 !default;
+$gray-lightest:             #B7B5B1 !default;
 
-$brand-primary:             #0275d8 !default;
-$brand-success:             #5cb85c !default;
-$brand-info:                #5bc0de !default;
-$brand-warning:             #f0ad4e !default;
-$brand-danger:              #d9534f !default;
+$brand-primary:             #67BBC4;
+$brand-success:             #5E9B78;
+$brand-info:                #B7B5B1;
+$brand-warning:             #DDC057;
+$brand-danger:              #DFA643;
 
 
 // Options
@@ -57,7 +57,7 @@ $enable-grid-classes:       true !default;
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 
-$spacer:                     1rem !default;
+$spacer:                     1.25rem !default;
 $spacer-x:                   $spacer !default;
 $spacer-y:                   $spacer !default;
 $spacers: (
@@ -85,7 +85,7 @@ $border-width:               1px !default;
 //
 // Settings for the `<body>` element.
 
-$body-bg:                    #fff !default;
+$body-bg:                    #F9F7F3 !default;
 $body-color:                 $gray-dark !default;
 
 
@@ -93,10 +93,10 @@ $body-color:                 $gray-dark !default;
 //
 // Style anchor elements.
 
-$link-color:                 $brand-primary !default;
+$link-color:                 $gray-dark !default;
 $link-decoration:            none !default;
-$link-hover-color:           darken($link-color, 15%) !default;
-$link-hover-decoration:      underline !default;
+$link-hover-color:           $brand-primary  !default;
+$link-hover-decoration:      none !default;
 
 
 // Grid breakpoints
@@ -148,19 +148,19 @@ $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !
 $font-family-base:           $font-family-serif !default;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
-$font-size-root:             20px !default;
+$font-size-root:             16px !default;
 
 $font-size-base:             1rem !default;
 $font-size-lg:               1.25rem !default;
 $font-size-sm:               .875rem !default;
 $font-size-xs:               .75rem !default;
 
-$font-size-h1:               2.5rem !default;
-$font-size-h2:               2rem !default;
-$font-size-h3:               1.75rem !default;
-$font-size-h4:               1.5rem !default;
-$font-size-h5:               1.25rem !default;
-$font-size-h6:               1rem !default;
+$font-size-h1:               2.875rem !default;
+$font-size-h2:               2.175rem !default;
+$font-size-h3:               1.5625rem !default;
+$font-size-h4:               1.375rem !default;
+$font-size-h5:               1.375rem !default;
+$font-size-h6:               0.875rem !default;
 
 $display1-size:               6rem !default;
 $display2-size:               5.5rem !default;
@@ -172,7 +172,7 @@ $display2-weight:             300 !default;
 $display3-weight:             300 !default;
 $display4-weight:             300 !default;
 
-$line-height:                1.5 !default;
+$line-height:                1.4 !default;
 
 $headings-margin-bottom:     ($spacer / 2) !default;
 $headings-font-family:       $font-family-sans-serif !default;
