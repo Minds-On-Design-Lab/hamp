@@ -4,26 +4,29 @@ layout: default
 
 <section id="slides" class="section-full">
 
-{% for slide in site.slides %}
-<div id="slide-{{forloop.index}}" class="slide" style="
-background-image:
-linear-gradient(
-   {{slide.color}},
-   {{slide.color}}
- ),
- url('{{slide.image}}')" >
+  {% for slide in site.slides %}
+    <div id="slide-{{forloop.index}}" class="slide" style="background-image:linear-gradient({{slide.color}},{{slide.color}}),
+     url('{{slide.image}}')" >
 
-  <div class="container">
+      <div class="container">
 
-    <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
-      <h1>{{ slide.title}}</h1>
+        <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
+          <h1>{{ slide.title}}</h1>
 
-      {{ slide.content }}
-      <img src="/uploads/arrow.svg"/>
+          {{ slide.content }}
+          <img src="/uploads/arrow.svg"/>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-{% endfor %}
+  {% endfor %}
+
+  <ul id="slide-dots" class="list-unstyled">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </li>
+
 </section>
 <section id="partners" class="section-full">
   <div class="container">
