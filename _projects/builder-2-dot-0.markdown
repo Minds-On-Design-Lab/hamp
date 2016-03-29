@@ -1,7 +1,7 @@
 ---
 title: Builder 2.0
 date: 2016-03-29 15:30:00 Z
-position: 1
+position: 4
 partner: HPDC
 image: "/uploads/window@2x.png"
 link: https://builder2.hpd-collaborative.org/
