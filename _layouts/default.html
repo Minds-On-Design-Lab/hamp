@@ -16,7 +16,29 @@
 
 
   <header id="header">
-    <nav id="menu" class="pull-xs-right"><h5>Menu</h5></nav>
+
+    <nav id="menu" class="navbar pull-xs-right">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#full-nav">
+        <h5>Menu &#9776;</h5>
+      </button>
+    </nav>
+
+    <div class="collapse" id="full-nav">
+      <ul class="nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><h2>About</h2></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><h2>Partners</h2></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><h2>Projects</h2></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><h2>News</h2></a>
+        </li>
+      </ul>
+    </div>
 
     <div id="logo-wrapper">
       <h2 id="logo">
@@ -35,7 +57,7 @@
 
     {{ content }}
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
@@ -45,6 +67,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
 
+  <script src="/scripts/bootstrap.min.js"></script>
   <script src="/scripts/scroll.js"></script>
 
 
