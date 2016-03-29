@@ -1,7 +1,7 @@
 ---
 title: Flame Retardants
 date: 2016-03-29 15:24:00 Z
-position: 3
+position: 2
 partner: GSPI
 image: "/uploads/building-frame@2x.png"
 link: http://greensciencepolicy.org/topics/flame-retardants/
