@@ -1,6 +1,7 @@
 ---
 title: The Pharos Project
 date: 2016-03-25 22:24:00 Z
+position: 0
 partner: HBN
 image: "/uploads/project-image.png"
 link: https://www.pharosproject.net/

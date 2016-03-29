@@ -1,6 +1,7 @@
 ---
 title: Donghia Materials Library
 date: 2016-03-29 15:22:00 Z
+position: 1
 partner: Parsons
 image: "/uploads/stack-of-drywall@2x.png"
 link: http://resources.parsons.edu/resource/e3-materials-resource-center/
