@@ -475,14 +475,14 @@ $state-danger-border:            darken($state-danger-bg, 5%) !default;
 
 
 // Cards
-$card-spacer-x:            1.25rem !default;
-$card-spacer-y:            .75rem !default;
-$card-border-width:        1px !default;
-$card-border-radius:       $border-radius !default;
+$card-spacer-x:            1.5rem !default;
+$card-spacer-y:            1.5rem !default;
+$card-border-width:        0 !default;
+$card-border-radius:       0 !default;
 $card-border-color:        #e5e5e5 !default;
-$card-border-radius-inner: $card-border-radius !default;
+$card-border-radius-inner: 0 !default;
 $card-cap-bg:              #f5f5f5 !default;
-$card-bg:                  #fff !default;
+$card-bg:                  #000 !default;
 
 $card-link-hover-color:    #fff !default;
 
