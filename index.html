@@ -15,10 +15,11 @@ linear-gradient(
 
   <div class="container">
 
-    <div class="card card-block">
+    <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
       <h1>{{ slide.title}}</h1>
 
       {{ slide.content }}
+      <img src="/uploads/arrow.svg"/>
     </div>
   </div>
 </div>
@@ -28,7 +29,6 @@ linear-gradient(
   <div class="container">
 
 
-    <h2>Partners</h2>
     <ul class="media-list">
     {% for partner in site.partners %}
 
@@ -53,21 +53,21 @@ linear-gradient(
   <div class="container">
 
 
-    <h2>Projects</h2>
     <ul class="media-list row">
     {% for project in site.projects %}
 
       <li class="media col-md-6">
+        <a href="{{ project.link }}" target="_blank">
+          <div class="media-left">
+            <img src="{{project.image}}" width="180px"/>
+          </div>
+          <div class="media-body">
+            <h6>{{ project.partner}}</h6>
+            <h4>{{ project.title}}</h4>
 
-        <div class="media-left">
-          <img src="{{project.image}}" width="180px"/>
-        </div>
-        <div class="media-body">
-          <h6>{{ project.partner}}</h6>
-          <h4>{{ project.title}}</h4>
-
-          {{ project.content }}
-        </div>
+            {{ project.content }}
+          </div>
+        </a>
 
       </li>
 
@@ -80,14 +80,14 @@ linear-gradient(
 <section id="news" class="section-full">
   <div class="container">
 
-    <ul>
+    <ul class="list-unstyled row">
     {% for post in site.posts %}
 
-      <li>
-
-        <h6>{{ post.date }}</h6>
-
-        <h3>{{ post.title}}</h3>
+      <li class="col-md-6">
+        <a href="{{ project.link }}" target="_blank">
+          <h6>{{ post.date }} &mdash; <span>{{ post.partner}}</span></h6>
+          <h3>{{ post.title}}</h3>
+        </a>
 
 
       </li>
