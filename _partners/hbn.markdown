@@ -1,7 +1,7 @@
 ---
 title: HBN
 date: 2016-03-25 22:23:00 Z
-position: 0
+position: 3
 image: "/uploads/hbn-horizontal.svg"
 fullName: Healthy Building Network
 link: https://www.healthybuilding.net/

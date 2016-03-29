@@ -1,7 +1,7 @@
 ---
 title: Parsons
 date: 2016-03-25 22:23:00 Z
-position: 1
+position: 2
 image: "/uploads/parsons-logo.svg"
 fullName: Parsons School of Design at The New School
 link: http://www.newschool.edu/parsons/
