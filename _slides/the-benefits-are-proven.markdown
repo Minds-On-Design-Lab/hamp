@@ -1,8 +1,8 @@
 ---
-title: The benefits are proven
+title: The best way to prevent toxin exposure is to eliminate the source.
 date: 2016-03-27 18:48:00 Z
-image: "/uploads/slide3.jpg"
-color: rgba(0,255,0,0.5)
+image: "/uploads/874386-bw.png"
+color: rgba(204,160,84,0.63)
 ---
 
-bjklajsd lkjasdlk jaslk djaslkdj lkasj dlkjas dkljasbjklajsd lkjasdlk jaslk djaslkdj lkasj dlkjas dkljas
+The Healthy Affordable Materials Project—supported by a grant from The JPB Foundation—seeks to improve the lives and health of affordable housing residents by reducing the use of toxins in the building product supply chain.

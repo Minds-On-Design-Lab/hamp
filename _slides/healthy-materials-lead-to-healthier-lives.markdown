@@ -1,6 +1,8 @@
 ---
 title: Healthy Materials Lead To Healthier Lives
-date: 2016-03-28 23:07:58.549000000 Z
+date: 2016-03-28 23:07:00 Z
+image: "/uploads/Girl_measured@2x.jpg"
+color: rgba(94,155,120,.5)
 ---
 
-Studies have shown the negative long-term health impact of exposure to toxic building materials, this exposure can be particularly harmful to young children.
+If we insist on change, we can protect the health of families in affordable housing communities everywhere.
