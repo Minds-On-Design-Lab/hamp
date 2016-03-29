@@ -3,9 +3,25 @@
 
 @import "bootstrap/bootstrap";
 
+@font-face {
+  font-family: 'Fort';
+  src: url('fonts/Fort-Bold.eot');
+  src: url('fonts/Fort-Bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fort';
+  src: url('fonts/Fort-Extrabold.eot');
+  src: url('fonts/Fort-Extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
 
 body {
   -webkit-scroll-snap-type: mandatory;
+  font-family: 500;
 
 }
 header#header {
@@ -51,6 +67,4 @@ header#header {
 .section-full {
   height: 100vh;
   -webkit-scroll-snap-coordinate: 0% 0%;
-
-
 }
