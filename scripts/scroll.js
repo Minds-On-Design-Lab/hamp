@@ -11,7 +11,7 @@ $(function () { // wait for document ready
 
     $('.slide').slice(1).each(function(index, slide) {
       console.log('sections',slide );
-      wipeAnimation.fromTo(slide, 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
+      wipeAnimation.fromTo(slide, 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone})  // in from left
     })
 
 
