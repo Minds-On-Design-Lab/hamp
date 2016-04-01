@@ -45,7 +45,7 @@ $(function () { // wait for document ready
     .on ('enter',function() {
       $('#section-name').text('Partners')
     })
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
 
@@ -57,7 +57,7 @@ $(function () { // wait for document ready
     .on ('enter',function() {
       $('#section-name').text('Projects')
     })
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -69,7 +69,7 @@ $(function () { // wait for document ready
       $('#section-name').text('News')
     })
 
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
 

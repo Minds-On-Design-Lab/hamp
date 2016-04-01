@@ -8,7 +8,7 @@ layout: default
     <div id="slide-{{forloop.index}}" class="slide" style="background-image:linear-gradient({{slide.color}},{{slide.color}}),
      url('{{slide.image}}')" >
 
-      <div class="container">
+      <div class="">
 
         <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
           <div class="">
@@ -39,10 +39,14 @@ layout: default
       <li class="row">
 
         <div class="col-md-4">
-          <img src="{{partner.image}}" class="img-responsive"/>
+          <a href="{{ partner.link }}" target="_blank">
+            <img src="{{partner.image}}" class="img-responsive"/>
+          </a>
         </div>
         <div class="col-md-8">
-          {{ partner.content }}
+          <a href="{{ partner.link }}" target="_blank">
+            {{ partner.content }}
+          </a>
         </div>
 
       </li>
