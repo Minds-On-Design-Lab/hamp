@@ -1,6 +1,7 @@
 ---
 title: We need greater transparency around the chemicals used in our building materials.
 date: 2016-03-29 11:34:00 -04:00
+position: 2
 image: "/uploads/470034-bw.png"
 color: rgba(103,187,196,.5)
 textureImage: "/uploads/blue_bkg.png"
