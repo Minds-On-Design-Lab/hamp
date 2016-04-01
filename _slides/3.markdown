@@ -1,7 +1,7 @@
 ---
 title: Every family's home should be safe
 date: 2016-03-27 14:48:00 -04:00
-position: 0
+position: 2
 color: rgba(221,192,87,.6)
 image: "/uploads/girls-on-sofa@2x.png"
 textureImage: "/uploads/yellow_bkg.png"
