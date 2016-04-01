@@ -214,6 +214,13 @@ nav#menu{
   }
 }
 
+#board{
+  .person{
+    margin-bottom: 40px;
+    min-height: 130px;
+  }
+}
+
 #projects{
   margin: 30px 0;
 
@@ -227,6 +234,9 @@ nav#menu{
   img{
     opacity: .3;
     transition: opacity .5s ease;
+    @include media-breakpoint-down(lg) {
+      width: 140px !important;
+    }
   }
   .media{
     margin: $spacer 0;
@@ -235,7 +245,7 @@ nav#menu{
     padding-right: $spacer;
   }
 
-  .col-md-6:nth-child(odd){
+  .col-lg-6:nth-child(odd){
     clear: both;
   }
 

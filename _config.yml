@@ -5,7 +5,7 @@ timezone: America/New_York
 collections:
   board:
     title: Board
-    output: true
+    output: false
   posts:
     title: News
     output: true
@@ -29,6 +29,12 @@ defaults:
     image: 
     fullName: 
     link: 
+- scope:
+    path: ''
+    type: board
+  values:
+    link: 
+    boardPosition: 
 - scope:
     path: ''
     type: projects

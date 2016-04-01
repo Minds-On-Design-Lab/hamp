@@ -112,9 +112,9 @@ $grid-breakpoints: (
   // Medium screen / tablet
   md: 768px,
   // Large screen / desktop
-  lg: 992px,
+  lg: 1300px,
   // Extra large screen / wide desktop
-  xl: 1400px
+  xl: 1650px
 ) !default;
 
 
@@ -125,7 +125,7 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 576px,
   md: 720px,
-  lg: 940px,
+  lg: 820px,
   xl: 1140px
 ) !default;
 
