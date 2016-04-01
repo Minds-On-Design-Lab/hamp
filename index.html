@@ -4,7 +4,7 @@ layout: default
 
 <section id="slides" class="section-full">
 
-  {% for slide in site.slides %}
+  {% for slide in site.slides|order:'position' %}
     <div id="slide-{{forloop.index}}" class="slide" style="background-image:linear-gradient({{slide.color}},{{slide.color}}),
      url('{{slide.image}}')" >
 
