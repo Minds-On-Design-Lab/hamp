@@ -201,7 +201,7 @@ nav#menu{
 }
 
 #partners{
-  margin: 30px 0;
+  padding: 30px 0;
   p{
     font-size: 1.2rem;
     @include media-breakpoint-down(lg) {
@@ -215,6 +215,10 @@ nav#menu{
 }
 
 #board{
+  background-color: $body-bg-dark;
+  padding: 30px 0;
+
+
   .person{
     margin-bottom: 40px;
     min-height: 130px;
@@ -261,7 +265,10 @@ nav#menu{
 }
 
 #news{
-  margin: 30px 0;
+  background-color: $body-bg-dark;
+
+  padding: 30px 0;
+  min-height: calc(100vh - 22px);
 
   h6 span{
     color: $brand-primary;
@@ -271,5 +278,15 @@ nav#menu{
     h6{
       color: $gray-dark;
     }
+  }
+}
+
+footer{
+  background-color: $gray-light;
+  color: white;
+  padding: $spacer 0;
+
+  a{
+    color: $brand-primary;
   }
 }
