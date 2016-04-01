@@ -3,6 +3,9 @@ title: Healthy Affordable Materials Project
 url: http://hamp.siteleaf.net
 timezone: America/New_York
 collections:
+  board:
+    title: Board
+    output: true
   posts:
     title: News
     output: true
