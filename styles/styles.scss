@@ -128,9 +128,13 @@ nav#menu{
 
   .card{
     max-width: 575px;
+    min-height: 440px;
     color: white;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     h1{
       margin-bottom: $spacer;
     }
