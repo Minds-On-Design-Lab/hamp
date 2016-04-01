@@ -48,6 +48,17 @@ $(function () { // wait for document ready
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
+    new ScrollMagic.Scene({
+      triggerElement: "#board",
+      duration: "100%"
+
+    })
+    .on ('enter',function() {
+      $('#section-name').text('Board')
+    })
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
 
     new ScrollMagic.Scene({
       triggerElement: "#projects",

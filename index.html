@@ -56,6 +56,22 @@ layout: default
   </div>
 </section>
 
+<section id="board" class="section-full">
+  <div class="container">
+    <div class="row">
+      {% for person in site.board %}
+        <div class="col-md-4">
+          <h6>{{person.boardPosition}}</h6>
+          <a href="{{ person.link }}" target="_blank">
+            <h4>{{ person.title}}</h4>
+          </a>
+          {{ person.content }}
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
+
 
 <section id="projects" class="section-full">
   <div class="container">
