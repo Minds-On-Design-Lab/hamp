@@ -5,8 +5,28 @@ layout: default
 <section id="slides" class="section-full">
 
   {% for slide in site.slides|order:'position' %}
-    <div id="slide-{{forloop.index}}" class="slide" style="background-image:linear-gradient({{slide.color}},{{slide.color}}),
-     url('{{slide.image}}')" >
+
+  <style>
+
+    #slide-{{forloop.index}} {
+      background-image: linear-gradient({{slide.color}},{{slide.color}});
+    }
+
+    #slide-{{forloop.index}}::after {
+      content: "";
+      background-image: url('{{slide.image}}');
+      opacity: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
+
+  </style>
+
+    <div id="slide-{{forloop.index}}" class="slide">
 
       <div class="">
 
