@@ -2,56 +2,73 @@
 layout: default
 ---
 
-<section id="slides" class="section-full">
+{% comment %}
+
+NOTE:
+The styles below need to be generated in a loop
+separate from the loop that generates the slides,
+otherwise fullpage.js scrolling won't work.
+
+{% endcomment %}
+
+<style>
+
+{% for slide in site.slides|order:'position' %}
+
+{% comment %}
+  #slide-{{forloop.index}} {
+    background-image: linear-gradient({{slide.color}},{{slide.color}});
+  }
+
+  #slide-{{forloop.index}}::after {
+    content: "";
+    background-image: url('{{slide.image}}');
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+{% endcomment %}
+{% endfor %}
+
+</style>
+
+<ul id="slide-dots" class="list-unstyled">
+  <li id="slide-dot-1"></li>
+  <li id="slide-dot-2"></li>
+  <li id="slide-dot-3"></li>
+  <li id="slide-dot-4"></li>
+</ul>
+
+<section id="fullpage" class="section-full">
+
 
   {% for slide in site.slides|order:'position' %}
 
-  <style>
+  <div class="background-image" style="background-image: linear-gradient({{slide.color}},{{slide.color}}),url('{{slide.image}}');">
+  </div>
 
-    #slide-{{forloop.index}} {
-      background-image: linear-gradient({{slide.color}},{{slide.color}});
-    }
+  <div id="slide-{{forloop.index}}" class="slide" data-color="{{ slide.color }}" data-image="{{slide.image}}">
+      <div class="card card-block">
+<!--      <div class="card card-block" style="background-image: url('{{slide.textureImage}}')"> -->
+        <div class="">
+          <h1>{{ slide.title}}</h1>
 
-    #slide-{{forloop.index}}::after {
-      content: "";
-      background-image: url('{{slide.image}}');
-      opacity: 0;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1;
-    }
-
-  </style>
-
-    <div id="slide-{{forloop.index}}" class="slide">
-
-      <div class="">
-
-        <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
-          <div class="">
-            <h1>{{ slide.title}}</h1>
-
-            {{ slide.content }}
-          </div>
+          {{ slide.content }}
         </div>
       </div>
-    </div>
+
+  </div>
   {% endfor %}
 
-  <ul id="slide-dots" class="list-unstyled">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </li>
-
 </section>
+
+
 <section id="partners" class="section-full">
   <div class="container">
-
 
     <ul class="media-list">
     {% for partner in site.partners %}
@@ -94,7 +111,6 @@ layout: default
   </div>
 </section>
 
-
 <section id="projects" class="section-full">
   <div class="container">
 
@@ -122,7 +138,6 @@ layout: default
   </div>
 </section>
 
-
 <section id="news" class="section-full">
   <div class="container">
 
@@ -134,8 +149,6 @@ layout: default
           <h6>{{ post.date | date: "%B %-d, %Y" }} &mdash; <span>{{ post.partner}}</span></h6>
           <h3>{{ post.title}}</h3>
         </a>
-
-
       </li>
 
     {% endfor %}
