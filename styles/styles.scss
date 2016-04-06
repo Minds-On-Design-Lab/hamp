@@ -80,72 +80,113 @@ header#header {
   left: 0px;
   z-index: 10;
 
-  #logo-wrapper{
-    position: relative;
-    z-index: 3;
+}
+
+#logo-wrapper{
+  position: relative;
+  z-index: 3;
+}
+
+#logo{
+  position: absolute;
+  font-size: 1.4rem;
+
+@include media-breakpoint-up(sm) {
+    position: fixed;
+    font-size: 1.9rem;
   }
 
-  #logo{
-    background-color: $gray;
-    padding: $spacer;
-    div:nth-child(1){
-      color: $brand-primary;
-    }
-    div:nth-child(2){
-      color: $brand-success;
-    }
-    div:nth-child(3){
-      color: $brand-warning;
-    }
-    div:nth-child(4){
-      color: $brand-danger;
-    }
-
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1s forwards, drop 1s forwards;
-
-      &#healthy {
-        animation-delay: 0.4s;
-      }
-
-      &#affordable{
-        animation-delay: 0.8s;
-      }
-
-      &#materials {
-        animation-delay: 1.2s;
-      }
-
-      &#project {
-        animation-delay: 1.6s;
-      }
-    }
-
+  top: 0;
+  left: 0;
+  background-color: $gray;
+  padding: $spacer;
+  div:nth-child(1){
+    color: $brand-primary;
+  }
+  div:nth-child(2){
+    color: $brand-success;
+  }
+  div:nth-child(3){
+    color: $brand-warning;
+  }
+  div:nth-child(4){
+    color: $brand-danger;
   }
 
-  #section-name {
-    background-color: $gray-light;
-    padding: $spacer;
-    color: white;
-    transform: translateY(-85px);
-    position: relative;
-    z-index: -1;
-    transition: transform 1s;
-    text-transform: capitalize;
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards, drop 1s forwards;
 
-    &.hidden {
-      transform: translateY(0);
+    &#healthy {
+      animation-delay: 0.4s;
+    }
+
+    &#affordable{
+      animation-delay: 0.8s;
+    }
+
+    &#materials {
+      animation-delay: 1.2s;
+    }
+
+    &#project {
+      animation-delay: 1.6s;
     }
   }
 
 }
 
+#section-name {
+  position: fixed;
+  top: 0;
+  // top: 180px;
+  background-color: $gray-light;
+  padding: $spacer;
+  color: white;
+  // transform: translateY(-85px);
+  // position: relative;
+  z-index: -1;
+  text-transform: capitalize;
+  width: 100%;
+  transform: translateY(-85px);
+  transition: transform 1s;
+
+  &.visible {
+    transform: translateY(0px);
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 215px;
+
+    &.visible {
+      transform: translateY(180px);
+    }
+  }
+}
+
 nav#menu{
   z-index: 12;
+
   h5{
     text-transform: uppercase;
     letter-spacing: 1px;
+  }
+}
+
+#menu, .navbar-toggler{
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbar-toggler {
+  color: white;
+  transition: color 2s;
+  &.in-main {
+    @include media-breakpoint-up(sm) {
+      color: $gray;
+    }
   }
 }
 
@@ -206,22 +247,33 @@ nav#menu{
     padding: 10rem;
 
     &::after {
-      animation: fadeIn 1s forwards;
-      animation-delay: 1s;
+      content: "";
+      opacity: 1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      height: 50vh;
+      background-size: cover;
+
+      @include media-breakpoint-up(sm) {
+        height: 100vh;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 1s;
+      }
     }
   }
 
   .card{
-    max-width: 575px;
-    min-height: 440px;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 3s;
 
-    @include media-breakpoint-down(lg) {
-      max-width: 465px;
-      min-height: 350px;
-    }
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    margin-bottom: 0;
+    opacity: 1;
     color: white;
     background-size: cover;
     background-repeat: no-repeat;
@@ -229,21 +281,48 @@ nav#menu{
     align-items: center;
     flex-wrap: wrap;
     position: absolute;
-    bottom: 8vh;
-    right: 8vw;
+    padding-top: 3rem;
+    min-height: 50vh;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 465px;
+      min-height: 350px;
+      bottom: 8vh;
+      right: 8vw;
+      margin-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 3s;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 575px;
+      min-height: 440px;
+    }
 
     h1{
       margin-bottom: $spacer;
+      font-weight: 600;
+      font-size: 1.6rem;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 2.1rem;
+      }
     }
 
     p{
       opacity: 0;
       animation: paragraphFadeIn 1s forwards;
       animation-delay: 3.2s;
+      font-size: 0.95rem;
 
-      font-size: 1.35rem;
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-up(sm) {
         font-size: 1.1rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: 1.35rem;
       }
     }
   }

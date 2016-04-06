@@ -46,10 +46,14 @@ $(function () { // wait for document ready
       $('#slide-dot-' + (index + 2)).css( 'background-color', 'rgba(255,255,255,.5)');
 
       if(index == 4){
-        $('#slide-dots, #section-name').addClass('hidden');
+        $('#slide-dots').addClass('hidden');
+        $('#section-name').addClass('visible');
+        $('.navbar-toggler').addClass('in-main');
       } else {
-        $('#slide-dots, #section-name').removeClass('hidden');
+        $('#slide-dots').removeClass('hidden');
+        $('#section-name').removeClass('visible');
         $('.nav-item.active').removeClass('active');
+        $('.navbar-toggler').removeClass('in-main');
       }
 
     }
