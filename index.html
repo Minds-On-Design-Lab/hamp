@@ -2,39 +2,6 @@
 layout: default
 ---
 
-{% comment %}
-
-NOTE:
-The styles below need to be generated in a loop
-separate from the loop that generates the slides,
-otherwise fullpage.js scrolling won't work.
-
-{% endcomment %}
-
-<style>
-
-{% for slide in site.slides|order:'position' %}
-
-{% comment %}
-  #slide-{{forloop.index}} {
-    background-image: linear-gradient({{slide.color}},{{slide.color}});
-  }
-
-  #slide-{{forloop.index}}::after {
-    content: "";
-    background-image: url('{{slide.image}}');
-    opacity: 0;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-  }
-{% endcomment %}
-{% endfor %}
-
-</style>
 
 <ul id="slide-dots" class="list-unstyled">
   <li class="slide-dot" id="slide-dot-1"></li>
@@ -44,7 +11,6 @@ otherwise fullpage.js scrolling won't work.
 </ul>
 
 <section id="slides" class="section-full">
-
 
   {% for slide in site.slides|order:'position' %}
 

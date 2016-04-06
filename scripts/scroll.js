@@ -18,24 +18,27 @@ $(function () { // wait for document ready
 
   $('.nav-item').click( function(){
 
-    $.scrollify.disable();
+    // $.scrollify.disable();
+
     $('#slide-dots').addClass('hidden');
+    $('.slide-dot').css( 'background-color', 'rgba(255,255,255,.5)');
     $('.nav-item.active').removeClass('active');
     $(this).addClass('active');
     $('.navbar-toggler').removeClass('nav-visible');
     $('#full-nav').velocity("fadeOut", { duration: 500 });
 
-    setTimeout(function(){
-      $.scrollify.enable();
-    }, 1000);
+    // setTimeout(function(){
+    //   $.scrollify.enable();
+    // }, 500);
   });
-
 
   $.scrollify({
     section : ".slide",
+    sectionName: false,
     setHeights:false,
     standardScrollElements:'#main-content',
     before:function(index) {
+      // console.log(index);
 
       var color = $('#slide-' + (index + 1)).data('color');
       $('#slide-dot-' + (index + 1)).css( 'background-color', color);
@@ -43,14 +46,28 @@ $(function () { // wait for document ready
       $('#slide-dot-' + (index + 2)).css( 'background-color', 'rgba(255,255,255,.5)');
 
       if(index == 4){
-        $('#slide-dots').addClass('hidden');
+        $('#slide-dots, #section-name').addClass('hidden');
       } else {
-        $('#slide-dots').removeClass('hidden');
+        $('#slide-dots, #section-name').removeClass('hidden');
         $('.nav-item.active').removeClass('active');
       }
 
     }
   });
+
+  $( "#main-content .section-full" ).each(function( index ) {
+    var sectionPosition = $(this).offset().top;
+    var sectionTitle = $(this).attr('id');
+    $(window).scroll(function() {
+      if (sectionPosition - $(window).scrollTop() <= 0) {
+        $('#section-name').text(sectionTitle);
+        $('.nav-item.active').removeClass('active');
+        $('#nav-item-' + sectionTitle).addClass('active');
+      }
+
+    });
+  });
+
 
   // var controller = new ScrollMagic.Controller();
   //
@@ -59,9 +76,11 @@ $(function () { // wait for document ready
   //       triggerHook: 0
   //     })
   //     // .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+  //     .on('enter', function(){
+  //
+  //     })
   //     .on('leave', function(){
   //
-  //       $.scrollify.previous();
   //     })
   //     .addTo(controller);
 
