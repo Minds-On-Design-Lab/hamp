@@ -140,7 +140,7 @@ nav#menu{
   }
 }
 
-.collapse{
+#full-nav{
   width: 100vw;
   min-height: 100vh;
   background-color: rgba(66,64,60,.95);
@@ -148,6 +148,7 @@ nav#menu{
   align-items: center;
   justify-content: center;
   text-align: center;
+  display: none;
 
   .nav-item a{
     color: #fff;
@@ -162,9 +163,9 @@ nav#menu{
     text-decoration: underline;
   }
 
-  &.in{
-    display: flex;
-  }
+  // &.visible{
+  //   display: flex;
+  // }
 
 }
 
@@ -353,7 +354,7 @@ nav#menu{
   background-color: $body-bg-dark;
 
   padding: 30px 0;
-  min-height: calc(100vh - 22px);
+  min-height: calc(100vh + 1px); // this prevents Scrollify from scrolling to the top of #main-content when user navigates to #news
 
   h6 span{
     color: $brand-primary;
