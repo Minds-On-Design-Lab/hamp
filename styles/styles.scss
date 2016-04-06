@@ -18,6 +18,32 @@
   font-style: normal;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drop {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes paragraphFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
 
 body {
   // -webkit-scroll-snap-type: mandatory;
@@ -47,50 +73,160 @@ h6{
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 header#header {
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 10;
 
-  #logo-wrapper{
-    position: relative;
-    z-index: 3;
+}
+
+#logo-wrapper{
+  position: relative;
+  z-index: 3;
+}
+
+#logo{
+  position: fixed;
+  font-size: 1.4rem;
+  top: 0;
+  left: 0;
+  background-color: $gray;
+  padding: $spacer;
+  transition: transform 1s;
+  z-index: -1;
+
+  &.hidden {
+    transform: translateY(-135px);
   }
 
-  #logo{
-    background-color: $gray;
-    padding: $spacer;
-    div:nth-child(1){
-      color: $brand-primary;
-    }
-    div:nth-child(2){
-      color: $brand-success;
-    }
-    div:nth-child(3){
-      color: $brand-warning;
-    }
-    div:nth-child(4){
-      color: $brand-danger;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.9rem;
+  }
+  @include media-breakpoint-up(lg) {
+    z-index: 0;
+    &.hidden {
+      transform: translateY(0);
     }
   }
-  #section-name {
-    background-color: $gray-light;
-    padding: $spacer;
-    color: white;
+
+  div:nth-child(1){
+    color: $brand-primary;
+  }
+  div:nth-child(2){
+    color: $brand-success;
+  }
+  div:nth-child(3){
+    color: $brand-warning;
+  }
+  div:nth-child(4){
+    color: $brand-danger;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards, drop 1s forwards;
+
+    &#healthy {
+      animation-delay: 0.4s;
+    }
+
+    &#affordable{
+      animation-delay: 0.8s;
+    }
+
+    &#materials {
+      animation-delay: 1.2s;
+    }
+
+    &#project {
+      animation-delay: 1.6s;
+    }
   }
 
 }
 
-nav#menu{
-  z-index: 2;
+#section-name {
+  position: fixed;
+  top: 0;
+  background-color: $gray-light;
+  padding: $spacer;
+  color: white;
+  z-index: -1;
+  text-transform: capitalize;
+  width: 100%;
+  transform: translateY(-85px);
+  transition: transform 1s;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &.visible {
+    transform: translateY(0px);
+  }
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.9rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 215px;
+
+    &.visible {
+      transform: translateY(180px);
+    }
+  }
+}
+
+#menu{
+
+  position: fixed;
+  top: 0px;
+  right:0px;
+  padding: $spacer;
+  z-index: 12;
+  padding-top: 0.75rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 1.25rem;
+  }
+
   h5{
     text-transform: uppercase;
     letter-spacing: 1px;
   }
 }
 
-.collapse{
+#menu, .navbar-toggler{
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbar-toggler {
+  color: white;
+  transition: color 2s;
+
+  &.in-main {
+    @include media-breakpoint-up(lg) {
+      color: $gray;
+    }
+  }
+
+  h5 {
+    font-size: 1rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.375rem;
+    }
+  }
+}
+
+#full-nav{
   width: 100vw;
   min-height: 100vh;
   background-color: rgba(66,64,60,.95);
@@ -98,6 +234,8 @@ nav#menu{
   align-items: center;
   justify-content: center;
   text-align: center;
+  display: none;
+  z-index: 11;
 
   .nav-item a{
     color: #fff;
@@ -112,10 +250,20 @@ nav#menu{
     text-decoration: underline;
   }
 
-  &.in{
-    display: flex;
-  }
+  // &.visible{
+  //   display: flex;
+  // }
 
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transition: background-image 1s;
 }
 
 
@@ -123,26 +271,45 @@ nav#menu{
   z-index: 5;
 
   .slide {
-    ///-webkit-scroll-snap-coordinate: 0% 0%;
-  background-size: cover;
-  background-repeat: no-repeat;
-    position: absolute;
+    //-webkit-scroll-snap-coordinate: 0% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
     top:0px;
     left:0px;
     width: 100%;
-    background-color: white;
+    // background-color: white;
     height: 100vh;
-
     padding: 10rem;
+
+    &::after {
+      content: "";
+      opacity: 1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      height: 50vh;
+      background-size: cover;
+
+      @include media-breakpoint-up(sm) {
+        height: 100vh;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 1s;
+      }
+    }
   }
 
   .card{
-    max-width: 575px;
-    min-height: 440px;
-    @include media-breakpoint-down(lg) {
-      max-width: 465px;
-      min-height: 350px;
-    }
+
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    margin-bottom: 0;
+    opacity: 1;
     color: white;
     background-size: cover;
     background-repeat: no-repeat;
@@ -150,21 +317,56 @@ nav#menu{
     align-items: center;
     flex-wrap: wrap;
     position: absolute;
-    bottom: 8vh;
-    right: 8vw;
+    padding-top: 3rem;
+    min-height: 50vh;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 465px;
+      min-height: 350px;
+      bottom: 8vh;
+      right: 8vw;
+      margin-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 3s;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 575px;
+      min-height: 440px;
+    }
+
     h1{
       margin-bottom: $spacer;
+      font-weight: 600;
+      font-size: 1.6rem;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 2s;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 2.1rem;
+        opacity: 1;
+        animation: none;
+      }
     }
+
     p{
-      opacity: .8;
-      font-size: 1.35rem;
-      @include media-breakpoint-down(lg) {
+      opacity: 0;
+      animation: paragraphFadeIn 1s forwards;
+      animation-delay: 3.2s;
+      font-size: 0.95rem;
+
+      @include media-breakpoint-up(sm) {
         font-size: 1.1rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: 1.35rem;
       }
     }
   }
-
-
 }
 
 #slide-dots{
@@ -172,36 +374,58 @@ nav#menu{
   right: 0;
   top: 50%;
   margin: -70px 0 0;
+  z-index: 4;
+  display: none;
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
   li{
     width: 10px;
     height: 10px;
     margin: $spacer;
     background-color: rgba(255,255,255,.5);
     border-radius: 50%;
+
+    &#slide-dot-1 {
+      background-color: rgba(103,187,196,.5);
+    }
   }
 }
-
-#menu {
-  position: fixed;
-  top: 0px;
-  right:0px;
-  padding: $spacer;
-}
-
 
 .section-full {
   min-height: 100vh;
   // -webkit-scroll-snap-coordinate: 0% 0%;
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 }
 
 .img-responsive{
   max-width: 100%;
 }
 
+#main-content {
+
+  .section-full {
+    padding: 60px 0 30px 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: 30px 0;
+    }
+  }
+}
+
+#partners, #projects {
+  background-color: white;
+}
+
 #partners{
-  padding: 30px 0;
+
   p{
     font-size: 1.2rem;
     @include media-breakpoint-down(lg) {
@@ -216,8 +440,6 @@ nav#menu{
 
 #board{
   background-color: $body-bg-dark;
-  padding: 30px 0;
-
 
   .person{
     margin-bottom: 40px;
@@ -226,7 +448,6 @@ nav#menu{
 }
 
 #projects{
-  margin: 30px 0;
 
   h6{
     color: $brand-primary;
@@ -266,9 +487,7 @@ nav#menu{
 
 #news{
   background-color: $body-bg-dark;
-
-  padding: 30px 0;
-  min-height: calc(100vh - 22px);
+  min-height: calc(100vh - 62px);
 
   h6 span{
     color: $brand-primary;
