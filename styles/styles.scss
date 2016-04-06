@@ -88,18 +88,27 @@ header#header {
 }
 
 #logo{
-  position: absolute;
+  position: fixed;
   font-size: 1.4rem;
-
-@include media-breakpoint-up(sm) {
-    position: fixed;
-    font-size: 1.9rem;
-  }
-
   top: 0;
   left: 0;
   background-color: $gray;
   padding: $spacer;
+  transition: transform 1s;
+  z-index: -1;
+
+  &.hidden {
+    transform: translateY(-135px);
+  }
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.9rem;
+    z-index: 0;
+    &.hidden {
+      transform: translateY(0);
+    }
+  }
+
   div:nth-child(1){
     color: $brand-primary;
   }
@@ -139,17 +148,17 @@ header#header {
 #section-name {
   position: fixed;
   top: 0;
-  // top: 180px;
   background-color: $gray-light;
   padding: $spacer;
   color: white;
-  // transform: translateY(-85px);
-  // position: relative;
   z-index: -1;
   text-transform: capitalize;
   width: 100%;
   transform: translateY(-85px);
   transition: transform 1s;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   &.visible {
     transform: translateY(0px);
@@ -157,6 +166,9 @@ header#header {
 
   @include media-breakpoint-up(sm) {
     width: 215px;
+    font-size: 1.9rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
 
     &.visible {
       transform: translateY(180px);
@@ -164,8 +176,18 @@ header#header {
   }
 }
 
-nav#menu{
+#menu{
+
+  position: fixed;
+  top: 0px;
+  right:0px;
+  padding: $spacer;
   z-index: 12;
+  padding-top: 0.75rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 1.25rem;
+  }
 
   h5{
     text-transform: uppercase;
@@ -183,9 +205,18 @@ nav#menu{
 .navbar-toggler {
   color: white;
   transition: color 2s;
+
   &.in-main {
     @include media-breakpoint-up(sm) {
       color: $gray;
+    }
+  }
+
+  h5 {
+    font-size: 1rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.375rem;
     }
   }
 }
@@ -305,9 +336,14 @@ nav#menu{
       margin-bottom: $spacer;
       font-weight: 600;
       font-size: 1.6rem;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 2s;
 
       @include media-breakpoint-up(sm) {
         font-size: 2.1rem;
+        opacity: 1;
+        animation: none;
       }
     }
 
@@ -334,6 +370,11 @@ nav#menu{
   top: 50%;
   margin: -70px 0 0;
   z-index: 999;
+  display: none;
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
 
   &.hidden {
     display: none;
@@ -351,14 +392,6 @@ nav#menu{
     }
   }
 }
-
-#menu {
-  position: fixed;
-  top: 0px;
-  right:0px;
-  padding: $spacer;
-}
-
 
 .section-full {
   min-height: 100vh;

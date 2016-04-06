@@ -49,11 +49,13 @@ $(function () { // wait for document ready
         $('#slide-dots').addClass('hidden');
         $('#section-name').addClass('visible');
         $('.navbar-toggler').addClass('in-main');
+        $('#logo').addClass('hidden');
       } else {
         $('#slide-dots').removeClass('hidden');
         $('#section-name').removeClass('visible');
         $('.nav-item.active').removeClass('active');
         $('.navbar-toggler').removeClass('in-main');
+        $('#logo').removeClass('hidden');
       }
 
     }
