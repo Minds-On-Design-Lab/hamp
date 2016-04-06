@@ -75,6 +75,13 @@ $(function () { // wait for document ready
   });
 
 
+  // $(window).scroll(function() {
+  //   console.log("Board: " + $("#board").offset().top);
+  //   console.log("Window:" + $(window).scrollTop());
+  //
+  // });
+
+
   // var controller = new ScrollMagic.Controller();
   //
   // var scene = new ScrollMagic.Scene({
