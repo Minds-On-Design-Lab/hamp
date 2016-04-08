@@ -1,6 +1,6 @@
 ---
 title: Builder 2.0
-date: 2016-03-29 15:30:00 Z
+date: 2016-03-29 11:30:00 -04:00
 position: 4
 partner: HPDC
 image: "/uploads/window@2x.png"
