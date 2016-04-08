@@ -1,8 +1,8 @@
 ---
 title: HPDC
-date: 2016-03-29 15:17:00 Z
+date: 2016-03-29 11:17:00 -04:00
 position: 3
-image: "/uploads/HPDC-Collaborative2.png"
+image: "/uploads/HPDC-logo.png"
 fullName: Health Product Declaration Collaborative
 link: http://www.hpd-collaborative.org/
 ---

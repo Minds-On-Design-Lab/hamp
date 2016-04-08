@@ -53,7 +53,8 @@ defaults:
     type: slides
   values:
     image: 
-    color: 
+    color-1: 
+    color-2: 
     textureImage: 
 permalink: pretty
 description: The Healthy Affordable Materials Project—a four-partner collaborative

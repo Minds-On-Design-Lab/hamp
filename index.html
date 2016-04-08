@@ -16,7 +16,7 @@ layout: default
   <style>
 
     #slide-{{forloop.index}} {
-      background-image: linear-gradient({{slide.color}},{{slide.color}});
+      background-image: linear-gradient({{slide.color-1}},{{slide.color-2}});
     }
 
     #slide-{{forloop.index}}::after {
@@ -41,20 +41,20 @@ layout: default
 
 <div class="slide" id="main-content">
 
-  <section id="partners" class="section-full">
+  <section id="partners" class="section-full" data-title="Partners">
     <div class="container">
 
       <ul class="media-list">
       {% for partner in site.partners %}
 
-        <li class="row">
+        <li class="media">
 
-          <div class="col-md-4">
+          <div class="media-left media-middle">
             <a href="{{ partner.link }}" target="_blank">
               <img src="{{partner.image}}" class="img-responsive"/>
             </a>
           </div>
-          <div class="col-md-8">
+          <div class="media-right media-middle">
             <a href="{{ partner.link }}" target="_blank">
               {{ partner.content }}
             </a>
@@ -67,25 +67,7 @@ layout: default
     </div>
   </section>
 
-  <section id="board" class="section-full">
-    <div class="container">
-      <div class="row">
-        {% for person in site.board %}
-          <div class="col-lg-4 col-md-6">
-            <div class="person">
-              <h6>{{person.boardPosition}}</h6>
-              <a href="{{ person.link }}" target="_blank">
-                <h4>{{ person.title}}</h4>
-              </a>
-              {{ person.content }}
-            </div>
-          </div>
-          {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section-full">
+  <section id="projects" class="section-full" data-title="Projects">
     <div class="container">
 
 
@@ -112,7 +94,26 @@ layout: default
     </div>
   </section>
 
-  <section id="news" class="section-full">
+  <section id="board" class="section-full" data-title="Advisory Board">
+    <div class="container">
+      <p class="lead">The Healthy Affordable Materials Project&mdash;supported by a grant from <a href="http://jpbfoundation.org/" target="_blank">The JPB Foundation</a>&mdash;seeks to improve the lives and health of affordable housing residents by reducing the use of toxins in the building product supply chain.</p>
+      <div class="row">
+        {% for person in site.board %}
+          <div class="col-lg-4 col-md-6">
+            <div class="person">
+              <h6>{{person.boardPosition}}</h6>
+              <a href="{{ person.link }}" target="_blank">
+                <h4>{{ person.title}}</h4>
+              </a>
+              {{ person.content }}
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="news" class="section-full">
     <div class="container">
 
       <ul class="list-unstyled row">
@@ -128,7 +129,7 @@ layout: default
       {% endfor %}
       </ul>
     </div>
-  </section>
+  </section> -->
 
 
 </div>
