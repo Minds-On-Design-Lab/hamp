@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7704852/6705352/css/fonts.css" />
 
+  <link rel="stylesheet" type="text/css" href="/styles/jquery.fullPage.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 </head>
 <body>
@@ -17,38 +18,39 @@
 
   <header id="header">
 
-    <!-- <nav id="menu" class="navbar pull-xs-right">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#full-nav">
-        <h5>Menu &#9776;</h5>
+    <nav id="menu" class="navbar pull-xs-right">
+      <button class="navbar-toggler" type="button">
+        <h5><span class="text">Menu</span> &#9776;</h5>
       </button>
     </nav>
 
-    <div class="collapse" id="full-nav">
+    <div id="full-nav">
       <ul class="nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><h2>About</h2></a>
+        <li class="nav-item" id="nav-item-partners">
+          <a class="nav-link" href="#partners"><h2>Partners</h2></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><h2>Partners</h2></a>
+        <li class="nav-item" id="nav-item-board">
+          <a class="nav-link" href="#board"><h2>Board</h2></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><h2>Projects</h2></a>
+        <li class="nav-item" id="nav-item-projects">
+          <a class="nav-link" href="#projects"><h2>Projects</h2></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><h2>News</h2></a>
+        <li class="nav-item" id="nav-item-news">
+          <a class="nav-link" href="#news"><h2>News</h2></a>
         </li>
       </ul>
-    </div> -->
-
-    <div id="logo-wrapper">
-      <h2 id="logo">
-        <div>Healthy</div><div>Affordable</div><div>Materials</div> <div>Project</div>
-      </h2>
-      <h2 id="section-name">
-        Projects
-      </h2>
     </div>
+
   </header>
+
+  <div id="logo-wrapper">
+    <h2 id="logo">
+      <div class="fade-in" id="healthy">Healthy</div><div class="fade-in" id="affordable">Affordable</div><div class="fade-in" id="materials">Materials</div> <div class="fade-in" id="project">Project</div>
+    </h2>
+    <h2 id="section-name">
+      Partners
+    </h2>
+  </div>
 
 
 
@@ -64,12 +66,12 @@
   </footer>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.scrollify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-
-
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
 

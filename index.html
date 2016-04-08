@@ -2,123 +2,133 @@
 layout: default
 ---
 
+<ul id="slide-dots" class="list-unstyled">
+  <li class="slide-dot" id="slide-dot-1"></li>
+  <li class="slide-dot" id="slide-dot-2"></li>
+  <li class="slide-dot" id="slide-dot-3"></li>
+  <li class="slide-dot" id="slide-dot-4"></li>
+</ul>
+
 <section id="slides" class="section-full">
 
   {% for slide in site.slides|order:'position' %}
-    <div id="slide-{{forloop.index}}" class="slide" style="background-image:linear-gradient({{slide.color}},{{slide.color}}),
-     url('{{slide.image}}')" >
 
-      <div class="">
+  <style>
 
-        <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
-          <div class="">
-            <h1>{{ slide.title}}</h1>
+    #slide-{{forloop.index}} {
+      background-image: linear-gradient({{slide.color}},{{slide.color}});
+    }
 
-            {{ slide.content }}
-          </div>
+    #slide-{{forloop.index}}::after {
+      background-image: url('{{slide.image}}');
+    }
+
+  </style>
+
+  <div id="slide-{{forloop.index}}" class="slide" data-color="{{ slide.color }}" data-image="{{slide.image}}">
+     <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
+        <div class="">
+          <h1>{{ slide.title}}</h1>
+
+          {{ slide.content }}
         </div>
       </div>
-    </div>
+
+  </div>
   {% endfor %}
 
-  <ul id="slide-dots" class="list-unstyled">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </li>
-
-</section>
-<section id="partners" class="section-full">
-  <div class="container">
-
-
-    <ul class="media-list">
-    {% for partner in site.partners %}
-
-      <li class="row">
-
-        <div class="col-md-4">
-          <a href="{{ partner.link }}" target="_blank">
-            <img src="{{partner.image}}" class="img-responsive"/>
-          </a>
-        </div>
-        <div class="col-md-8">
-          <a href="{{ partner.link }}" target="_blank">
-            {{ partner.content }}
-          </a>
-        </div>
-
-      </li>
-
-    {% endfor %}
-    </ul>
-  </div>
 </section>
 
-<section id="board" class="section-full">
-  <div class="container">
-    <div class="row">
-      {% for person in site.board %}
-        <div class="col-lg-4 col-md-6">
-          <div class="person">
-            <h6>{{person.boardPosition}}</h6>
-            <a href="{{ person.link }}" target="_blank">
-              <h4>{{ person.title}}</h4>
+<div class="slide" id="main-content">
+
+  <section id="partners" class="section-full">
+    <div class="container">
+
+      <ul class="media-list">
+      {% for partner in site.partners %}
+
+        <li class="row">
+
+          <div class="col-md-4">
+            <a href="{{ partner.link }}" target="_blank">
+              <img src="{{partner.image}}" class="img-responsive"/>
             </a>
-            {{ person.content }}
           </div>
-        </div>
-        {% endfor %}
+          <div class="col-md-8">
+            <a href="{{ partner.link }}" target="_blank">
+              {{ partner.content }}
+            </a>
+          </div>
+
+        </li>
+
+      {% endfor %}
+      </ul>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section id="projects" class="section-full">
-  <div class="container">
-
-
-    <ul class="media-list row">
-    {% for project in site.projects %}
-
-      <li class="media col-lg-6">
-        <a href="{{ project.link }}" target="_blank">
-          <div class="media-left">
-            <img src="{{project.image}}" width="180px"/>
+  <section id="board" class="section-full">
+    <div class="container">
+      <div class="row">
+        {% for person in site.board %}
+          <div class="col-lg-4 col-md-6">
+            <div class="person">
+              <h6>{{person.boardPosition}}</h6>
+              <a href="{{ person.link }}" target="_blank">
+                <h4>{{ person.title}}</h4>
+              </a>
+              {{ person.content }}
+            </div>
           </div>
-          <div class="media-body">
-            <h6>{{ project.partner}}</h6>
-            <h4>{{ project.title}}</h4>
+          {% endfor %}
+      </div>
+    </div>
+  </section>
 
-            {{ project.content }}
-          </div>
-        </a>
-
-      </li>
-
-    {% endfor %}
-    </ul>
-  </div>
-</section>
+  <section id="projects" class="section-full">
+    <div class="container">
 
 
-<section id="news" class="section-full">
-  <div class="container">
+      <ul class="media-list row">
+      {% for project in site.projects %}
 
-    <ul class="list-unstyled row">
-    {% for post in site.posts %}
+        <li class="media col-lg-6">
+          <a href="{{ project.link }}" target="_blank">
+            <div class="media-left">
+              <img src="{{project.image}}" width="180px"/>
+            </div>
+            <div class="media-body">
+              <h6>{{ project.partner}}</h6>
+              <h4>{{ project.title}}</h4>
 
-      <li class="col-md-6">
-        <a href="{{ post.link }}" target="_blank">
-          <h6>{{ post.date }} &mdash; <span>{{ post.partner}}</span></h6>
-          <h3>{{ post.title}}</h3>
-        </a>
+              {{ project.content }}
+            </div>
+          </a>
+
+        </li>
+
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section id="news" class="section-full">
+    <div class="container">
+
+      <ul class="list-unstyled row">
+      {% for post in site.posts %}
+
+        <li class="col-md-6">
+          <a href="{{ post.link }}" target="_blank">
+            <h6>{{ post.date | date: "%B %-d, %Y" }} &mdash; <span>{{ post.partner}}</span></h6>
+            <h3>{{ post.title}}</h3>
+          </a>
+        </li>
+
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
 
 
-      </li>
-
-    {% endfor %}
-    </ul>
-  </div>
-</section>
+</div>
