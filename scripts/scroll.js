@@ -65,7 +65,7 @@ $(function () { // wait for document ready
 
   $( "#main-content .section-full" ).each(function( index ) {
     var sectionPosition = $(this).offset().top;
-    var sectionTitle = $(this).attr('id');
+    var sectionTitle = $(this).data('title');
     $(window).scroll(function() {
       if (sectionPosition - $(window).scrollTop() <= 0) {
         $('#section-name').text(sectionTitle);

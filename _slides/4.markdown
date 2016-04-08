@@ -1,10 +1,11 @@
 ---
-title: The best way to prevent toxin exposure is to eliminate the source.
+title: Healthy Materials Lead To Healthier Lives
 date: 2016-03-29 11:37:00 -04:00
-position: 3
+position: 1
 image: "/uploads/874386-bw.png"
-color: rgba(204,160,84,0.63)
-textureImage: "/uploads/orange_bkg.png"
+color-1: rgba(204,160,84,0.63)
+color-2: rgba(221,192,87,.6)
+textureImage: "/uploads/cement_bg.png"
 ---
 
-The Healthy Affordable Materials Project—supported by a grant from The JPB Foundation—seeks to improve the lives and health of affordable housing residents by reducing the use of toxins in the building product supply chain.
+If we insist on change, we can protect the health of families in affordable housing communities everywhere.
