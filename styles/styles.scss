@@ -388,8 +388,8 @@ header#header {
     }
 
     @include media-breakpoint-up(xl) {
-      max-width: 575px;
-      min-height: 440px;
+      max-width: 550px;
+      min-height: 380px;
     }
 
     h1{
@@ -401,7 +401,7 @@ header#header {
       animation-delay: 2s;
 
       @include media-breakpoint-up(sm) {
-        font-size: 2.1rem;
+        font-size: 2.5rem;
         opacity: 1;
         animation: none;
       }
@@ -412,6 +412,7 @@ header#header {
       animation: paragraphFadeIn 1s forwards;
       animation-delay: 3.2s;
       font-size: 0.95rem;
+      margin-bottom: 0;
 
       @include media-breakpoint-up(sm) {
         font-size: 1.1rem;

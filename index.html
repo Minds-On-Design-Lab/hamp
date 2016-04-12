@@ -7,7 +7,7 @@ layout: default
     <div id="slide-{{forloop.index}}" class="slide slide-full" data-color="{{ slide.color }}" data-image="{{slide.image}}">
       <div class="overlay"></div>
       <div class="bg-img"></div>
-      
+
       <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
         <div class="">
           <h1>{{ slide.title}}</h1>
@@ -77,7 +77,7 @@ layout: default
 
   <section id="board" class="section-full js-section" data-title="Advisory Board">
     <div class="container">
-      <p class="lead">The Healthy Affordable Materials Project&mdash;supported by a grant from <a href="http://jpbfoundation.org/" target="_blank">The JPB Foundation</a>&mdash;seeks to improve the lives and health of affordable housing residents by reducing the use of toxins in the building product supply chain.</p>
+      <p class="lead">The Healthy Affordable Materials Project is a four-part collaborative supported by a grant from <a href="http://jpbfoundation.org/" target="_blank">The JPB Foundation</a> and guided by a board of expert advisors.</p>
       <div class="row">
         {% for person in site.board %}
           <div class="col-lg-4 col-md-6">
@@ -91,6 +91,7 @@ layout: default
           </div>
           {% endfor %}
       </div>
+      <p class="lead"><i>A full list of advisors is forthcoming.</i></p>
     </div>
   </section>
 

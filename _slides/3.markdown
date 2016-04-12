@@ -1,5 +1,5 @@
 ---
-title: Every family's home should be safe
+title: Every home should be healthy.
 date: 2016-03-29 11:36:00 -04:00
 position: 0
 color-1: rgba(103,187,196,.5)
@@ -8,4 +8,4 @@ image: "/uploads/mom-daughter-reading.jpg"
 textureImage: "/uploads/carpet_bg.png"
 ---
 
-Low-income communities across the United States suffer disproportionally from exposure to the toxic substances too commonly used in building products.
+Exposure to toxic materials used in building products can have serious long-term health implications, but homes can be built to be healthier.

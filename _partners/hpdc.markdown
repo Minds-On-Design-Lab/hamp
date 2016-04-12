@@ -7,4 +7,4 @@ fullName: Health Product Declaration Collaborative
 link: http://www.hpd-collaborative.org/
 ---
 
-The Health Product Declaration Collaborative (HPDC) is a customer-led organization committed to the continuous improvement of the building industry's performance through transparency, openness, and innovation in the product supply chain.
+The Health Product Declaration ™ Collaborative (HPDC) is a nonprofit, customer-led organization committed to the continuous improvement of the building industry's performance through transparency, openness, and innovation in the product supply chain

@@ -1,6 +1,6 @@
 ---
 title: Parsons
-date: 2016-03-25 22:23:00 Z
+date: 2016-03-25 18:23:00 -04:00
 position: 1
 image: "/uploads/parsons-logo.svg"
 fullName: Parsons School of Design at The New School
