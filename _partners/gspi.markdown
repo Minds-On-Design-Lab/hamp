@@ -7,4 +7,4 @@ fullName: Green Science Policy Institute
 link: http://greensciencepolicy.org/
 ---
 
-The Green Science Policy Institute (GSPI) The Green Science Policy Institute facilitates the responsible use of chemicals to protect human and ecological health. They educate and build partnerships among scientists, regulators, businesses, and public interest groups to develop innovative solutions for reducing harmful chemicals in products.
+The Green Science Policy Institute (GSPI) facilitates the responsible use of chemicals to protect human and ecological health. They educate and build partnerships among scientists, regulators, businesses, and public interest groups to develop innovative solutions for reducing harmful chemicals in products. 

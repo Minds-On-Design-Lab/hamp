@@ -50,7 +50,7 @@ $(function () { // wait for document ready
   			})
   			.setPin("#slides")
   			.setTween(wipeAnimation)
-  			.addIndicators() // add indicators (requires plugin)
+  			// .addIndicators() // add indicators (requires plugin)
         .on('leave',function() {
 
           $('.navbar-toggler').addClass('in-main');
