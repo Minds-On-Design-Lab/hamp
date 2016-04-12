@@ -2,30 +2,13 @@
 layout: default
 ---
 
-<ul id="slide-dots" class="list-unstyled">
-  <li class="slide-dot" id="slide-dot-1"></li>
-  <li class="slide-dot" id="slide-dot-2"></li>
-  <li class="slide-dot" id="slide-dot-3"></li>
-  <li class="slide-dot" id="slide-dot-4"></li>
-</ul>
 
-<section id="slides" class="section-full">
+
 
   {% for slide in site.slides|order:'position' %}
 
-  <style>
 
-    #slide-{{forloop.index}} {
-      background-image: linear-gradient({{slide.color-1}},{{slide.color-2}});
-    }
-
-    #slide-{{forloop.index}}::after {
-      background-image: url('{{slide.image}}');
-    }
-
-  </style>
-
-  <div id="slide-{{forloop.index}}" class="slide" data-color="{{ slide.color }}" data-image="{{slide.image}}">
+  <div id="slide-{{forloop.index}}" class="slide slide-full" data-color="{{ slide.color }}" data-image="{{slide.image}}">
      <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
         <div class="">
           <h1>{{ slide.title}}</h1>
@@ -37,7 +20,6 @@ layout: default
   </div>
   {% endfor %}
 
-</section>
 
 <div class="slide" id="main-content">
 

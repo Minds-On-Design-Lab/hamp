@@ -43,9 +43,9 @@ $(function () { // wait for document ready
       // console.log(index);
 
       var color = $('#slide-' + (index + 1)).data('color');
-      $('#slide-dot-' + (index + 1)).css( 'background-color', color);
-      $('#slide-dot-' + index).css( 'background-color', 'rgba(255,255,255,.5)');
-      $('#slide-dot-' + (index + 2)).css( 'background-color', 'rgba(255,255,255,.5)');
+      // $('#slide-dot-' + (index + 1)).css( 'background-color', color);
+      // $('#slide-dot-' + index).css( 'background-color', 'rgba(255,255,255,.5)');
+      // $('#slide-dot-' + (index + 2)).css( 'background-color', 'rgba(255,255,255,.5)');
 
       if(index == 4){
         $('#slide-dots').addClass('hidden');
