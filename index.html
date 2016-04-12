@@ -8,8 +8,8 @@ layout: default
   {% for slide in site.slides|order:'position' %}
     <div id="slide-{{forloop.index}}" class="slide slide-full" data-color="{{ slide.color }}" data-image="{{slide.image}}">
       <div class="overlay"></div>
-
       <div class="bg-img"></div>
+      
       <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
         <div class="">
           <h1>{{ slide.title}}</h1>

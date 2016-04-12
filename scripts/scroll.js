@@ -51,6 +51,14 @@ $(function () { // wait for document ready
   			.setPin("#slides")
   			.setTween(wipeAnimation)
   			.addIndicators() // add indicators (requires plugin)
+        .on('leave',function() {
+
+          $('.navbar-toggler').addClass('in-main');
+        })
+        .on('enter',function() {
+
+          $('.navbar-toggler').removeClass('in-main');
+        })
   			.addTo(controller);
 
   // $.scrollify({
@@ -130,9 +138,13 @@ $(function () { // wait for document ready
           $('#nav-item-' + sectionTitle).addClass('active');
           $('#section-name').text(sectionTitle);
           $('#section-name').addClass('visible');
+          $('#logo').addClass('hidden');
+
         } else {
           $('#section-name').text('');
           $('#section-name').removeClass('visible');
+          $('#logo').removeClass('hidden');
+
 
         }
 
