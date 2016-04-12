@@ -10,20 +10,22 @@
 
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7704852/6705352/css/fonts.css" />
 
-  <!-- <link rel="stylesheet" type="text/css" href="/styles/jquery.fullPage.css" /> -->
+  <link rel="stylesheet" type="text/css" href="/styles/jquery.fullPage.css" />
   <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
   <style>
 
   {% for slide in site.slides|order:'position' %}
 
 
-      #slide-{{forloop.index}} {
-        background-image: linear-gradient({{slide.color-1}},{{slide.color-2}});
-      }
 
-      #slide-{{forloop.index}}::after {
-        background-image: url('{{slide.image}}');
-      }
+    #slide-{{forloop.index}} .bg-img {
+      background-image: url('{{slide.image}}');
+
+    }
+
+    #slide-{{forloop.index}} .overlay {
+      background-image: linear-gradient({{slide.color-1}},{{slide.color-2}});
+    }
 
   {% endfor %}
 
@@ -71,9 +73,11 @@
 
 
 
-
+  <main id="main">
 
     {{ content }}
+
+  </main>
 
   <!-- <footer>
     <div class="container">
