@@ -50,15 +50,8 @@ $(function () { // wait for document ready
   			})
   			.setPin("#slides")
   			.setTween(wipeAnimation)
-  			.addIndicators() // add indicators (requires plugin)
-        .on('leave',function() {
+  			//.addIndicators() // add indicators (requires plugin)
 
-          $('.navbar-toggler').addClass('in-main');
-        })
-        .on('enter',function() {
-
-          $('.navbar-toggler').removeClass('in-main');
-        })
   			.addTo(controller);
 
   // $.scrollify({
@@ -121,14 +114,21 @@ $(function () { // wait for document ready
 
   $(window).scroll(function() {
 
-    var scrollPosition = $(document).scrollTop();
+
+    var scrollPosition= $(document).scrollTop();
+
+    var scrollPositionSection = scrollPosition + 172;
+
+
+
 
     $( ".js-section" ).each(function( index ) {
       var sectionTitle = $(this).data('title');
 
-
       var element = $(this);
-			if (element.position().top <= scrollPosition && element.position().top + element.height() > scrollPosition && activeSection != sectionTitle) {
+
+
+			if (element.position().top <= scrollPositionSection && element.position().top + element.height() > scrollPositionSection && activeSection != sectionTitle) {
         console.log('Section:', sectionTitle);
 
         activeSection = sectionTitle;
@@ -140,10 +140,15 @@ $(function () { // wait for document ready
           $('#section-name').addClass('visible');
           $('#logo').addClass('hidden');
 
+          $('.navbar-toggler').addClass('in-main');
+
+
         } else {
           $('#section-name').text('');
           $('#section-name').removeClass('visible');
           $('#logo').removeClass('hidden');
+          $('.navbar-toggler').removeClass('in-main');
+
 
 
         }
