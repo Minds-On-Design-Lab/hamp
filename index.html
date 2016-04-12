@@ -2,46 +2,27 @@
 layout: default
 ---
 
-<ul id="slide-dots" class="list-unstyled">
-  <li class="slide-dot" id="slide-dot-1"></li>
-  <li class="slide-dot" id="slide-dot-2"></li>
-  <li class="slide-dot" id="slide-dot-3"></li>
-  <li class="slide-dot" id="slide-dot-4"></li>
-</ul>
-
-<section id="slides" class="section-full">
-
+<section id="slides" class="js-section" data-title="">
   {% for slide in site.slides|order:'position' %}
-
-  <style>
-
-    #slide-{{forloop.index}} {
-      background-image: linear-gradient({{slide.color-1}},{{slide.color-2}});
-    }
-
-    #slide-{{forloop.index}}::after {
-      background-image: url('{{slide.image}}');
-    }
-
-  </style>
-
-  <div id="slide-{{forloop.index}}" class="slide" data-color="{{ slide.color }}" data-image="{{slide.image}}">
-     <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
+    <div id="slide-{{forloop.index}}" class="slide slide-full" data-color="{{ slide.color }}" data-image="{{slide.image}}">
+      <div class="overlay"></div>
+      <div class="bg-img"></div>
+      
+      <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
         <div class="">
           <h1>{{ slide.title}}</h1>
 
           {{ slide.content }}
         </div>
       </div>
-
-  </div>
+    </div>
   {% endfor %}
-
 </section>
+
 
 <div class="slide" id="main-content">
 
-  <section id="partners" class="section-full" data-title="Partners">
+  <section id="partners" class="section-full js-section" data-title="Partners">
     <div class="container">
 
       <ul class="media-list">
@@ -67,7 +48,7 @@ layout: default
     </div>
   </section>
 
-  <section id="projects" class="section-full" data-title="Projects">
+  <section id="projects" class="section-full js-section" data-title="Projects">
     <div class="container">
 
 
@@ -94,7 +75,7 @@ layout: default
     </div>
   </section>
 
-  <section id="board" class="section-full" data-title="Advisory Board">
+  <section id="board" class="section-full js-section" data-title="Advisory Board">
     <div class="container">
       <p class="lead">The Healthy Affordable Materials Project&mdash;supported by a grant from <a href="http://jpbfoundation.org/" target="_blank">The JPB Foundation</a>&mdash;seeks to improve the lives and health of affordable housing residents by reducing the use of toxins in the building product supply chain.</p>
       <div class="row">
