@@ -316,7 +316,6 @@ header#header {
   top:0px;
   left:0px;
   width: 100%;
-  // background-color: white;
   height: 100vh;
   padding: 10rem;
 
@@ -342,8 +341,9 @@ header#header {
     bottom: 0;
     right: 0;
     position: absolute;
-    height: 100vh;
+    height: 60vh;
     background-size: cover;
+    background-position: 20% 50%;
     z-index: -1;
 
 
@@ -372,8 +372,8 @@ header#header {
     align-items: center;
     flex-wrap: wrap;
     position: absolute;
-    padding-top: 3rem;
-    min-height: 50vh;
+    // padding-top: 3rem;
+    min-height: 40vh;
 
     @include media-breakpoint-up(sm) {
       max-width: 465px;
@@ -384,12 +384,12 @@ header#header {
       padding-top: 1.5rem;
       opacity: 0;
       animation: fadeIn 1s forwards;
-      animation-delay: 3s;
+      animation-delay: 1.25s;
     }
 
     @include media-breakpoint-up(xl) {
-      max-width: 575px;
-      min-height: 440px;
+      max-width: 550px;
+      min-height: 380px;
     }
 
     h1{
@@ -401,7 +401,7 @@ header#header {
       animation-delay: 2s;
 
       @include media-breakpoint-up(sm) {
-        font-size: 2.1rem;
+        font-size: 2.5rem;
         opacity: 1;
         animation: none;
       }
@@ -410,8 +410,9 @@ header#header {
     p{
       opacity: 0;
       animation: paragraphFadeIn 1s forwards;
-      animation-delay: 3.2s;
+      animation-delay: 2s;
       font-size: 0.95rem;
+      margin-bottom: 0;
 
       @include media-breakpoint-up(sm) {
         font-size: 1.1rem;
@@ -486,6 +487,10 @@ header#header {
     @include media-breakpoint-down(lg) {
       width: 33%;
     }
+    @include media-breakpoint-down(md) {
+      width: 40%;
+
+    }
 
     @include media-breakpoint-down(sm) {
       display: block;
@@ -493,10 +498,9 @@ header#header {
     }
 
     img{
-      max-height: 150px;
-      @include media-breakpoint-down(lg) {
-        max-height: 140px;
-      }
+      max-height: 130px;
+      max-width: 250px;
+
       @include media-breakpoint-down(sm) {
         margin-bottom: 20px;
       }
@@ -549,6 +553,9 @@ header#header {
   }
   .media-left{
     padding-right: $spacer;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
 
   .col-lg-6:nth-child(odd){
@@ -580,8 +587,11 @@ header#header {
   }
 
   .person{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     min-height: 130px;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 40px;
+    }
   }
 }
 

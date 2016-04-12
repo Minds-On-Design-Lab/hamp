@@ -50,8 +50,6 @@ $(function () { // wait for document ready
   			})
   			.setPin("#slides")
   			.setTween(wipeAnimation)
-  			//.addIndicators() // add indicators (requires plugin)
-
   			.addTo(controller);
 
   // $.scrollify({

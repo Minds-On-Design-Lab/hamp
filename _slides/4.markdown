@@ -1,11 +1,11 @@
 ---
-title: Healthy Materials Lead To Healthier Lives
+title: The best way to prevent hazardous exposure is to eliminate the source.
 date: 2016-03-29 11:37:00 -04:00
 position: 1
-image: "/uploads/874386-bw.png"
+image: "/uploads/builder-bw.jpg"
 color-1: rgba(204,160,84,0.63)
 color-2: rgba(221,192,87,.6)
 textureImage: "/uploads/cement_bg.png"
 ---
 
-If we insist on change, we can protect the health of families in affordable housing communities everywhere.
+The Healthy Affordable Materials Project seeks to improve the lives and health of affordable housing residents by reducing the use of toxic materials in building products.
