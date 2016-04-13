@@ -1,9 +1,9 @@
 ---
 title: CompAIR
-date: 2016-03-29 15:31:00 Z
+date: 2016-03-29 11:31:00 -04:00
 position: 5
 partner: HBN
-image: "/uploads/beam@2x.png"
+image: "/uploads/paint.jpg"
 link: https://www.pharosproject.net/volatiles/
 ---
 
