@@ -1,6 +1,6 @@
 ---
 title: The Pharos Project
-date: 2016-03-25 22:24:00 Z
+date: 2016-03-25 18:24:00 -04:00
 position: 0
 partner: HBN
 image: "/uploads/beakers.jpg"
