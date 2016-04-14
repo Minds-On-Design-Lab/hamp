@@ -9,11 +9,16 @@ $(function () { // wait for document ready
     if($(this).hasClass('nav-visible')) {
       $('#full-nav').velocity("fadeOut", { duration: 500 });
       $(this).removeClass('nav-visible');
+      $(this).find('h5').text ('Menu ☰  ');
+
       $('.nav-item').removeClass('visible');
     } else {
       $('#full-nav').velocity("fadeIn", { display: "flex", duration: 500 });
       $(this).addClass('nav-visible');
       $('.nav-item').addClass('visible');
+
+      $(this).find('h5').text('Close ×');
+
     }
 
   });

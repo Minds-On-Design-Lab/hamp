@@ -208,6 +208,7 @@ header#header {
   right:0px;
   padding: $spacer;
   padding-top: 0.75rem;
+  z-index: 12;
 
   @include media-breakpoint-up(sm) {
     padding-top: 1.25rem;
@@ -234,6 +235,10 @@ header#header {
     @include media-breakpoint-up(lg) {
       color: $gray;
     }
+  }
+
+  &.nav-visible {
+    color: white;
   }
 
   h5 {
