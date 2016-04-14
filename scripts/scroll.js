@@ -112,32 +112,42 @@ $(function () { // wait for document ready
 
   var activeSection = '';
 
+  var mainOffset = $('#main-content').position().top;
+
+
+  /// function buildSizeModel
+
+
+  var sectionModel = {};
+
+
+
 
   $(window).scroll(function() {
 
 
     var scrollPosition= $(document).scrollTop();
+    var scrollPosition = scrollPosition + 172;
 
-    var mainOffset = $('#main-content').position().top;
-    console.log(mainOffset);
+    if (scrollPosition < mainOffset) {
 
-
-    var scrollPositionSection = scrollPosition + 172 - mainOffset;
-
-
-
-    $( ".js-section" ).each(function( index ) {
-      var sectionTitle = $(this).data('title');
-
-      var element = $(this);
+      if (activeSection) {
+        $('#section-name').text('');
+        $('#section-name').removeClass('visible');
+        $('#logo').removeClass('hidden');
+        $('.navbar-toggler').removeClass('in-main');
+        activeSection = null;
+      }
 
 
-			if (element.position().top <= scrollPositionSection && element.position().top + element.height() > scrollPositionSection && activeSection != sectionTitle) {
-        console.log('Section:', sectionTitle);
+    } else {
 
-        activeSection = sectionTitle;
-
-        if (sectionTitle ) {
+      $( ".js-section" ).each(function( index ) {
+        var sectionTitle = $(this).data('title');
+        var element = $(this);
+        var top = element.position().top + mainOffset;
+    		if (top <= scrollPosition && top + element.height() > scrollPosition && activeSection != sectionTitle) {
+          activeSection = sectionTitle;
           $('.nav-item.active').removeClass('active');
           $('#nav-item-' + sectionTitle).addClass('active');
           $('#section-name').text(sectionTitle);
@@ -145,22 +155,15 @@ $(function () { // wait for document ready
           $('#logo').addClass('hidden');
 
           $('.navbar-toggler').addClass('in-main');
+          console.log('new section', sectionTitle);
+          return false;
 
-
-        } else {
-          $('#section-name').text('');
-          $('#section-name').removeClass('visible');
-          $('#logo').removeClass('hidden');
-          $('.navbar-toggler').removeClass('in-main');
-
-
-
-        }
+    		}
+      });
+    }
 
 
 
-			}
-    });
 
   });
 

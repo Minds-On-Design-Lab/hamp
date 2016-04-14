@@ -8,8 +8,10 @@
 /* When position: sticky is supported but native behavior is ignored */
 .fixedsticky-withoutfixedfixed .fixedsticky-off,
 .fixed-supported .fixedsticky-off,
-.fixedsticky-withoutfixedfixed .fixedsticky {
+.no-csspositionsticky .fixedsticky {
+
 	position: relative;
+
 }
 .fixedsticky-withoutfixedfixed .fixedsticky-on,
 .fixed-supported .fixedsticky-on {
