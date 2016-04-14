@@ -15,6 +15,11 @@ layout: default
           {{ slide.content }}
         </div>
       </div>
+      {% if slide.photoCredit|length %}
+        <div class="photo-credit">
+          Photo: {{ slide.photoCredit }}
+        </div>
+      {% endif %}
     </div>
   {% endfor %}
 </section>
@@ -57,9 +62,11 @@ layout: default
 
         <li class="media col-lg-6">
           <a href="{{ project.link }}" target="_blank">
+            {% if project.image|length %}
             <div class="media-left">
               <img src="{{project.image}}" width="180px"/>
             </div>
+            {% endif %}
             <div class="media-body">
               <h6>{{ project.partner}}</h6>
               <h4>{{ project.title}}</h4>
