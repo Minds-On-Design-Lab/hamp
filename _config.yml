@@ -6,6 +6,9 @@ collections:
   board:
     title: Board
     output: false
+    Intro Text: The Healthy Affordable Materials Project is a four-part collaborative
+      supported by a grant from [The JPB Foundation](http://jpbfoundation.org/) and
+      guided by a board of expert advisors.
   posts:
     title: News
     output: true
