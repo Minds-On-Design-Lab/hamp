@@ -34,23 +34,26 @@ $(function () { // wait for document ready
     // }, 500);
   });
 
-  var controller = new ScrollMagic.Controller();
-
-  var wipeAnimation = new TimelineMax()
-    // animate to second panel
-    //.fromTo("#slide-1", 1, {y: "0%"}, {y: "0%", ease: Linear.easeNone})  // in from left
-		.fromTo("#slide-2",    1, {y:  "100%", z:"0%"}, {y: "0%",z:"-50%", ease: Linear.easeNone})  // in from right
+  $( '.fixedsticky' ).fixedsticky();
 
 
-
-    new ScrollMagic.Scene({
-  				triggerElement: "#slides",
-  				triggerHook: "onLeave",
-  				duration: "100%"
-  			})
-  			.setPin("#slides")
-  			.setTween(wipeAnimation)
-  			.addTo(controller);
+  // var controller = new ScrollMagic.Controller();
+  //
+  // var wipeAnimation = new TimelineMax()
+  //   // animate to second panel
+  //   //.fromTo("#slide-1", 1, {y: "0%"}, {y: "0%", ease: Linear.easeNone})  // in from left
+	// 	.fromTo("#slide-2",    1, {y:  "100%", z:"0%"}, {y: "0%",z:"-50%", ease: Linear.easeNone})  // in from right
+  //
+  //
+  //
+  //   new ScrollMagic.Scene({
+  // 				triggerElement: "#slides",
+  // 				triggerHook: "onLeave",
+  // 				duration: "100%"
+  // 			})
+  // 			.setPin("#slides")
+  // 			.setTween(wipeAnimation)
+  // 			.addTo(controller);
 
   // $.scrollify({
   //   section : ".slide",

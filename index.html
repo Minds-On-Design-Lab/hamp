@@ -2,9 +2,8 @@
 layout: default
 ---
 
-<section id="slides" class="js-section" data-title="">
   {% for slide in site.slides|order:'position' %}
-    <div id="slide-{{forloop.index}}" class="slide slide-full" data-color="{{ slide.color }}" data-image="{{slide.image}}">
+  <div id="slide-{{forloop.index}}" class="slide slide-full fixedsticky" data-color="{{ slide.color }}" data-image="{{slide.image}}">
       <div class="overlay"></div>
       <div class="bg-img"></div>
 
@@ -20,9 +19,8 @@ layout: default
           Photo: {{ slide.photoCredit }}
         </div>
       {% endif %}
-    </div>
+  </div>
   {% endfor %}
-</section>
 
 
 <div class="slide" id="main-content">
