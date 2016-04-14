@@ -118,8 +118,11 @@ $(function () { // wait for document ready
 
     var scrollPosition= $(document).scrollTop();
 
-    var scrollPositionSection = scrollPosition + 172;
+    var mainOffset = $('#main-content').position().top;
+    console.log(mainOffset);
 
+
+    var scrollPositionSection = scrollPosition + 172 - mainOffset;
 
 
 
