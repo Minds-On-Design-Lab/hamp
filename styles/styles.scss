@@ -410,7 +410,7 @@ header#header {
     p{
       opacity: 0;
       animation: paragraphFadeIn 1s forwards;
-      animation-delay: 2s;
+      animation-delay: 1.8s;
       font-size: 0.95rem;
       margin-bottom: 0;
 
@@ -421,6 +421,23 @@ header#header {
       @include media-breakpoint-up(xl) {
         font-size: 1.35rem;
       }
+    }
+  }
+
+  .photo-credit{
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    color: #fff;
+    animation: paragraphFadeIn 1s forwards;
+    animation-delay: 2.1s;
+    font-size: .75rem;
+    bottom: .5rem;
+    right: .5rem;
+    @include media-breakpoint-up(sm) {
+      font-size: .875rem;
+      bottom: .75rem;
+      right: .75rem;
     }
   }
 }
