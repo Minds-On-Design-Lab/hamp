@@ -91,13 +91,14 @@ header#header {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 10;
+  z-index: 100;
+
 
 }
 
 #logo-wrapper{
   position: relative;
-  z-index: 100;
+  z-index: 90;
 }
 
 #logo{
@@ -206,7 +207,6 @@ header#header {
   top: 0px;
   right:0px;
   padding: $spacer;
-  z-index: 12;
   padding-top: 0.75rem;
 
   @include media-breakpoint-up(sm) {
