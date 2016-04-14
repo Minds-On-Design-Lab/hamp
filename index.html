@@ -84,7 +84,7 @@ layout: default
 
   <section id="board" class="section-full js-section" data-title="Advisory Board">
     <div class="container">
-      <p class="lead">The Healthy Affordable Materials Project is a four-part collaborative supported by a grant from <a href="http://jpbfoundation.org/" target="_blank">The JPB Foundation</a> and guided by a board of expert advisors.</p>
+      <p class="lead">{{ site.collections[0].intro|markdown }}</p>
       <div class="row">
         {% for person in site.board %}
           <div class="col-lg-4 col-md-6">
@@ -98,7 +98,7 @@ layout: default
           </div>
           {% endfor %}
       </div>
-      <p class="lead"><i>A full list of advisors is forthcoming.</i></p>
+      <p class="lead"><i>{{site.collections[0].comingSoon}}</i></p>
     </div>
   </section>
 
