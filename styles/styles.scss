@@ -114,7 +114,7 @@ header#header {
     transform: translateY(-135px);
   }
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     font-size: 1.9rem;
   }
   @include media-breakpoint-up(lg) {
@@ -122,6 +122,12 @@ header#header {
     &.hidden {
       transform: translateY(0);
     }
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 700px) and (orientation: landscape){
+    font-size: 1rem;
+    padding: .75rem;
+
   }
 
   div:nth-child(1){
@@ -341,7 +347,7 @@ header#header {
     bottom: 0;
     right: 0;
     position: absolute;
-    height: 60vh;
+    height: 58vh;
     background-size: cover;
     background-position: 20% 50%;
     z-index: -1;
@@ -372,16 +378,16 @@ header#header {
     align-items: center;
     flex-wrap: wrap;
     position: absolute;
-    // padding-top: 3rem;
-    min-height: 40vh;
+    padding: 1.5rem 1rem 3rem;
+    min-height: 42vh;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       max-width: 465px;
       min-height: 350px;
       bottom: 8vh;
       right: 8vw;
       margin-bottom: 1.5rem;
-      padding-top: 1.5rem;
+      padding: 1.5rem 2rem;
       opacity: 0;
       animation: fadeIn 1s forwards;
       animation-delay: 1.25s;
@@ -400,7 +406,7 @@ header#header {
       animation: fadeIn 1s forwards;
       animation-delay: 2s;
 
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up(md) {
         font-size: 2.5rem;
         opacity: 1;
         animation: none;
@@ -414,7 +420,7 @@ header#header {
       font-size: 0.95rem;
       margin-bottom: 0;
 
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up(md) {
         font-size: 1.1rem;
       }
 
@@ -434,7 +440,7 @@ header#header {
     font-size: .75rem;
     bottom: .5rem;
     right: .5rem;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       font-size: .875rem;
       bottom: .75rem;
       right: .75rem;
@@ -450,7 +456,7 @@ header#header {
   z-index: 4;
   display: none;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     display: block;
   }
 
