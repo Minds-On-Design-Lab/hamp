@@ -1,6 +1,7 @@
 ---
-title: HPD 2.0.
+title: HPD 2.0
 date: 2016-04-14 11:45:00 -04:00
+position: 6
 partner: HPDC
 image: "/uploads/HPD.jpg"
 link: http://www.hpd-collaborative.org/hpd-2-0-standard/
