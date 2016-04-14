@@ -84,7 +84,7 @@ layout: default
 
   <section id="board" class="section-full js-section" data-title="Advisory Board">
     <div class="container">
-      <p class="lead">{{ site.collections[0].intro|markdown }}</p>
+      <div class="lead">{{ site.collections[0].intro|markdownify }}</div>
       <div class="row">
         {% for person in site.board %}
           <div class="col-lg-4 col-md-6">
