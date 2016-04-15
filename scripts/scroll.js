@@ -34,6 +34,8 @@ $(function () { // wait for document ready
     $('.navbar-toggler').removeClass('nav-visible');
     $('#full-nav').velocity("fadeOut", { duration: 500 });
 
+    $('.navbar-toggler').removeClass('nav-visible');
+    $('.navbar-toggler').find('h5').text ('Menu ☰  ');
     // setTimeout(function(){
     //   $.scrollify.enable();
     // }, 500);
