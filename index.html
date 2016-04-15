@@ -35,7 +35,7 @@ layout: default
 
           <div class="media-left media-middle">
             <a href="{{ partner.link }}" target="_blank">
-              <img src="{{partner.image}}" class="img-responsive"/>
+              <img src="{{partner.image}}" class="img-responsive" alt="{{partner.fullName}}"/>
             </a>
           </div>
           <div class="media-body media-middle">
@@ -62,7 +62,7 @@ layout: default
           <a href="{{ project.link }}" target="_blank">
             {% if project.image|length %}
             <div class="media-left">
-              <img src="{{project.image}}" width="180px"/>
+              <img src="{{project.image}}" width="180px" alt="{{ project.title}}"/>
             </div>
             {% endif %}
             <div class="media-body">
