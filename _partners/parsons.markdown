@@ -7,4 +7,4 @@ fullName: The Healthy Materials Lab
 link: http://www.healthymaterialslab.org/
 ---
 
-The Healthy Materials Lab, housed at Parsons School of Design, supports healthier lives for all people through the dramatic reduction of toxics of products used in the building industry. Parsons School of Design at The New School is one of the world’s leading institutions for art and design education.
+The Healthy Materials Lab, housed at Parsons School of Design, supports healthier lives for all people by advocating for the dramatic reduction of toxics in building products. Parsons School of Design at The New School is one of the world’s leading institutions for art and design education.
