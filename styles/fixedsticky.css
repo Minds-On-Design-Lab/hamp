@@ -5,6 +5,7 @@
 	position: -o-sticky;
 	position: sticky;
 	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 
 
 }

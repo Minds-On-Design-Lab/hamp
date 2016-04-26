@@ -61,6 +61,8 @@ defaults:
     color-2: 
     textureImage: 
 permalink: pretty
+gems:
+- octopress-autoprefixer
 description: The Healthy Affordable Materials Project—a four-partner collaborative
   funded by The JPB Foundation—unites manufacturers, developers, research scientists,
   designers, and advocates in a push to replace existing materials with safer, more
