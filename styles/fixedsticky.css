@@ -4,6 +4,9 @@
 	position: -ms-sticky;
 	position: -o-sticky;
 	position: sticky;
+	backface-visibility: hidden;
+
+
 }
 /* When position: sticky is supported but native behavior is ignored */
 .fixedsticky-withoutfixedfixed .fixedsticky-off,
