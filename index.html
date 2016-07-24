@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <section id="hero">
   {% for slide in site.slides|order:'position' %}
     <div id="slide-{{forloop.index}}" class="slide slide-full" data-color="{{ slide.color }}" data-image="{{slide.image}}">
