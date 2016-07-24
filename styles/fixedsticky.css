@@ -20,13 +20,32 @@
 .fixedsticky-withoutfixedfixed .fixedsticky-on,
 .fixed-supported .fixedsticky-on {
 	position: fixed;
+
 }
 
 
+#slide-1 {
+	position: fixed;
+	top: 0px;
+}
+
+#slide-2 {
+	position: relative;
+	margin-top: 100vh;
+}
+
+#slide-2 .fixedsticky-on {
+	/*margin-top: 0px;
+	top:0px;*/
+}
 
 .fixedsticky-dummy {
 	display: none;
 }
 .fixedsticky-on + .fixedsticky-dummy {
 	display: block;
+}
+
+section#hero {
+	height: 200vh;
 }
