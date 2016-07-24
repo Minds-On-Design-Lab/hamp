@@ -1,27 +1,27 @@
 ---
 layout: default
 ---
-
+<section id="hero">
   {% for slide in site.slides|order:'position' %}
-  <div id="slide-{{forloop.index}}" class="slide slide-full fixedsticky" data-color="{{ slide.color }}" data-image="{{slide.image}}">
-      <div class="overlay"></div>
-      <div class="bg-img"></div>
+    <div id="slide-{{forloop.index}}" class="slide slide-full" data-color="{{ slide.color }}" data-image="{{slide.image}}">
+        <div class="overlay"></div>
+        <div class="bg-img"></div>
 
-      <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
-        <div class="">
-          <h1>{{ slide.title}}</h1>
+        <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
+          <div class="">
+            <h1>{{ slide.title}}</h1>
 
-          {{ slide.content }}
+            {{ slide.content }}
+          </div>
         </div>
-      </div>
-      {% if slide.photoCredit|length %}
-        <div class="photo-credit">
-          Photo: {{ slide.photoCredit }}
-        </div>
-      {% endif %}
-  </div>
+        {% if slide.photoCredit|length %}
+          <div class="photo-credit">
+            Photo: {{ slide.photoCredit }}
+          </div>
+        {% endif %}
+    </div>
   {% endfor %}
-
+<section>
 
 <div id="main-content">
 
