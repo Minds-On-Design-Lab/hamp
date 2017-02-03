@@ -8,26 +8,20 @@ collections:
     intro: The Healthy Affordable Materials Project is a four-part collaborative supported
       by a grant from [The JPB Foundation](http://jpbfoundation.org/) and guided by
       a board of expert advisors.
-    advisoryCommittee: |-
-      Joseph Allen, Director of the Healthy Buildings program at the Harvard Center for Health and the Global Environment
-
-      Michael Bodaken, President of National Housing Trust
-
-      Lisa Britton, Director of Sales & Marketing and Sustainability Champion at Industrial Louvers, Inc.
-
-      Erin Christensen Ishizaki, Partner and co-director of Urban Placemaking at Mithun
-
-      Rolf Halden, Ph.D., P.E., Professor in the School of Sustainable Engineering and the Built Environment at Arizona State University
-
-      Chunrong Jia, PhD, Associate Professor, Division of Epidemiology, Biostatistics, and Environmental Health at University of Memphis
-
-      John McManus, editorial and digital content director for the Residential Group at Hanley Wood
-
-      Hilary Noll, Enterprise Rose Architectural Fellow working with First Community Housing in San Jose, CA.
-
-      Seandra Pope, President & CEO of Rooted Consulting Group
-
-      Fran Wagstaff, National Affordable Housing Expert and an innovator who redefined the way affordable housing is perceived, designed, developed and financed
+    advisoryCommittee: "Joseph Allen, Director of the Healthy Buildings program at
+      the Harvard Center for Health and the Global Environment  \n\nMichael Bodaken,
+      President of National Housing Trust  \n\nLisa Britton, Director of Sales & Marketing
+      and Sustainability Champion at Industrial Louvers, Inc.  \n\nErin Christensen
+      Ishizaki, Partner and co-director of Urban Placemaking at Mithun  \n\nRolf Halden,
+      Ph.D., P.E., Professor in the School of Sustainable Engineering and the Built
+      Environment at Arizona State University  \n\nChunrong Jia, PhD, Associate Professor,
+      Division of Epidemiology, Biostatistics, and Environmental Health at University
+      of Memphis  \n\nJohn McManus, editorial and digital content director for the
+      Residential Group at Hanley Wood  \n\nHilary Noll, Enterprise Rose Architectural
+      Fellow working with First Community Housing in San Jose, CA.  \n\nSeandra Pope,
+      President & CEO of Rooted Consulting Group  \n\nFran Wagstaff, National Affordable
+      Housing Expert and an innovator who redefined the way affordable housing is
+      perceived, designed, developed and financed  "
   posts:
     title: News
     output: true
