@@ -2,7 +2,7 @@
 title: GSPI
 date: 2016-03-29 11:08:00 -04:00
 position: 2
-image: "/uploads/GSP_logo_icon&staggeredtext_big%20(2).png"
+image: "/uploads/GSP_logo_icon&staggeredtext_big%20(2)%20copy.png"
 fullName: Green Science Policy Institute
 link: http://greensciencepolicy.org/
 ---
