@@ -1,27 +1,186 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<!-- Site by Familiar
+    //////////////////////
+  //////////////////////
+//////////////////////
+///////
+///////
+///////
+///////
+///////
+///////////////////////
+/////////////////////
+///////////////////
+///////
+///////
+///////
+///////
+/////
+///
+/
+www.familiar-studio.com -->
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="generator" content="Siteleaf, http://siteleaf.com" />
+  <title>Healthy Affordable Materials Project</title>
 
-<section id="hero">
-  {% for slide in site.slides|order:'position' %}
-    <div id="slide-{{forloop.index}}" class="slide slide-full" data-color="{{ slide.color }}" data-image="{{slide.image}}">
+  <meta name="description" content="The Healthy Affordable Materials Project—a four-partner collaborative funded by The JPB Foundation—unites manufacturers, developers, research scientists, designers, and advocates in a push to replace existing materials with safer, more affordable alternatives.">
+
+
+  <!-- apple touch and favicontags -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="favicon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="favicon/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="favicon/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="favicon/mstile-310x310.png" />
+
+  <!-- facebook meta tags -->
+  <meta property="og:url"                content="http://healthymaterialshealthyhomes.org" />
+  <meta property="og:title"              content="Healthy Affordable Materials Project" />
+  <meta property="og:site_name"          content="Healthy Affordable Materials Project"/>
+  <meta property="og:description"        content="The Healthy Affordable Materials Project—a four-partner collaborative funded by The JPB Foundation—unites manufacturers, developers, research scientists, designers, and advocates in a push to replace existing materials with safer, more affordable alternatives." />
+  <meta property="og:image"              content="/uploads/hamp-fb-image.png" />
+  <meta property="og:type"               content="website"/>
+
+  <!-- twitter cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Healthy Affordable Materials Project" />
+  <meta name="twitter:description" content="The Healthy Affordable Materials Project—a four-partner collaborative funded by The JPB Foundation—unites manufacturers, developers, research scientists, designers, and advocates in a push to replace existing materials with safer, more affordable alternatives." />
+  <meta name="twitter:image" content="/uploads/hamp-twitter-image.png" />
+  <meta name="twitter:url" content="http://healthymaterialshealthyhomes.org" />
+
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7704852/6705352/css/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/fixedsticky.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+  <style>
+
+  
+
+
+
+    #slide-1 .bg-img {
+      background-image: url('/uploads/family-reading.jpg');
+
+    }
+
+    #slide-1 .overlay {
+      background-image: linear-gradient(rgba(103,187,196,.5),rgba(94,155,120,.5));
+    }
+
+  
+
+
+
+    #slide-2 .bg-img {
+      background-image: url('/uploads/builder-bw.jpg');
+
+    }
+
+    #slide-2 .overlay {
+      background-image: linear-gradient(rgba(204,160,84,0.63),rgba(221,192,87,.6));
+    }
+
+  
+
+  </style>
+
+
+</head>
+<body>
+
+
+  <header id="header">
+
+    <nav id="menu" class="navbar pull-xs-right">
+      <button class="navbar-toggler" type="button">
+        <h5>Menu &#9776;</h5>
+      </button>
+    </nav>
+
+    <div id="full-nav">
+      <ul class="nav">
+        <li class="nav-item" id="nav-item-partners">
+          <a class="nav-link" href="#partners"><h2>Partners</h2></a>
+        </li>
+        <li class="nav-item" id="nav-item-projects">
+          <a class="nav-link" href="#projects"><h2>Projects</h2></a>
+        </li>
+        <li class="nav-item" id="nav-item-board">
+          <a class="nav-link" href="#board"><h2>Advisory Board</h2></a>
+        </li>
+
+      </ul>
+    </div>
+
+  </header>
+
+  <div id="logo-wrapper">
+    <h2 id="logo">
+      <div class="fade-in" id="healthy">Healthy</div><div class="fade-in" id="affordable">Affordable</div><div class="fade-in" id="materials">Materials</div> <div class="fade-in" id="project">Project</div>
+    </h2>
+    <h2 id="section-name">
+      Partners
+    </h2>
+  </div>
+
+
+
+
+  <main id="main">
+
+    <section id="hero">
+  
+    <div id="slide-1" class="slide slide-full" data-color="" data-image="/uploads/family-reading.jpg">
         <div class="overlay"></div>
         <div class="bg-img"></div>
 
-        <div class="card card-block" style="background-image: url('{{slide.textureImage}}')">
+        <div class="card card-block" style="background-image: url('/uploads/carpet_bg.png')">
           <div class="">
-            <h1>{{ slide.title}}</h1>
+            <h1>Every home should be healthy.</h1>
 
-            {{ slide.content }}
+            <p>Exposure to toxic materials used in building products can have serious long-term health implications, but homes can be built to be healthier.</p>
+
           </div>
         </div>
-        {% if slide.photoCredit|length %}
+        
           <div class="photo-credit">
-            Photo: {{ slide.photoCredit }}
+            Photo: CommonBond Communities, St. Paul, MN
           </div>
-        {% endif %}
+        
     </div>
-  {% endfor %}
+  
+    <div id="slide-2" class="slide slide-full" data-color="" data-image="/uploads/builder-bw.jpg">
+        <div class="overlay"></div>
+        <div class="bg-img"></div>
+
+        <div class="card card-block" style="background-image: url('/uploads/cement_bg.png')">
+          <div class="">
+            <h1>The best way to prevent hazardous exposure is to eliminate the source.</h1>
+
+            <p>The Healthy Affordable Materials Project seeks to improve the lives and health of affordable housing residents by reducing the use of toxic materials in building products.</p>
+
+          </div>
+        </div>
+        
+    </div>
+  
 <section>
 
 <div id="main-content">
@@ -30,24 +189,79 @@ layout: default
     <div class="container">
 
       <ul class="media-list">
-      {% for partner in site.partners %}
+      
 
         <li class="media">
 
           <div class="media-left media-middle">
-            <a href="{{ partner.link }}" target="_blank">
-              <img src="{{partner.image}}" class="img-responsive" alt="{{partner.fullName}}"/>
+            <a href="https://www.healthybuilding.net/" target="_blank">
+              <img src="/uploads/HBN_NameLockup_RGB.png" class="img-responsive" alt="Healthy Building Network"/>
             </a>
           </div>
           <div class="media-body media-middle">
-            <a href="{{ partner.link }}" target="_blank">
-              {{ partner.content }}
+            <a href="https://www.healthybuilding.net/" target="_blank">
+              <p>Healthy Building Network is reducing the use of hazardous chemicals in building products through scientific research, education, and tools that allow designers and building owners to specify less toxic products that improve human and environmental health, and social equity outcomes.</p>
+
             </a>
           </div>
 
         </li>
 
-      {% endfor %}
+      
+
+        <li class="media">
+
+          <div class="media-left media-middle">
+            <a href="http://www.healthymaterialslab.org/" target="_blank">
+              <img src="/uploads/HML-logo.png" class="img-responsive" alt="The Healthy Materials Lab"/>
+            </a>
+          </div>
+          <div class="media-body media-middle">
+            <a href="http://www.healthymaterialslab.org/" target="_blank">
+              <p>The Healthy Materials Lab, housed at Parsons School of Design, supports healthier lives for all people by advocating for the dramatic reduction of toxics in building products. Parsons School of Design at The New School is one of the world’s leading institutions for art and design education.</p>
+
+            </a>
+          </div>
+
+        </li>
+
+      
+
+        <li class="media">
+
+          <div class="media-left media-middle">
+            <a href="http://greensciencepolicy.org/" target="_blank">
+              <img src="/uploads/GSP_logo_icon&staggeredtext_final.png" class="img-responsive" alt="Green Science Policy Institute"/>
+            </a>
+          </div>
+          <div class="media-body media-middle">
+            <a href="http://greensciencepolicy.org/" target="_blank">
+              <p>The Green Science Policy Institute (GSPI) facilitates the responsible use of chemicals to protect human and ecological health. They educate and build partnerships among scientists, regulators, businesses, and public interest groups to develop innovative solutions for reducing harmful chemicals in products.</p>
+
+            </a>
+          </div>
+
+        </li>
+
+      
+
+        <li class="media">
+
+          <div class="media-left media-middle">
+            <a href="http://www.hpd-collaborative.org/" target="_blank">
+              <img src="/uploads/HPDC-logo.png" class="img-responsive" alt="Health Product Declaration Collaborative"/>
+            </a>
+          </div>
+          <div class="media-body media-middle">
+            <a href="http://www.hpd-collaborative.org/" target="_blank">
+              <p>The Health Product Declaration® (HPD) Collaborative is a customer-led, member organization committed to the continuous improvement of the building industry’s performance through transparency, openness and innovation in the product supply chain. The HPD Collaborative created, supports and evolves the Health Product Declaration (HPD), the most widely used open standard format for the accurate reporting of material contents and potential health information for building products.</p>
+
+            </a>
+          </div>
+
+        </li>
+
+      
       </ul>
     </div>
   </section>
@@ -57,49 +271,228 @@ layout: default
 
 
       <ul class="media-list row">
-      {% for project in site.projects %}
+      
 
         <li class="media col-lg-6">
-          <a href="{{ project.link }}" target="_blank">
-            {% if project.image|length %}
+          <a href="https://www.pharosproject.net/" target="_blank">
+            
             <div class="media-left">
-              <img src="{{project.image}}" width="180px" alt="{{ project.title}}"/>
+              <img src="/uploads/beakers.jpg" width="180px" alt="The Pharos Project"/>
             </div>
-            {% endif %}
+            
             <div class="media-body">
-              <h6>{{ project.partner}}</h6>
-              <h4>{{ project.title}}</h4>
+              <h6>HBN</h6>
+              <h4>The Pharos Project</h4>
 
-              {{ project.content }}
+              <p>The Pharos Project is the most independent and comprehensive database for identifying health hazards associated with nearly 40,000 chemicals. It encourages manufacturer transparency; helps designers and building owners avoid using toxic building products; and creates incentives for product redesign and modification.</p>
+
             </div>
           </a>
 
         </li>
 
-      {% endfor %}
+      
+
+        <li class="media col-lg-6">
+          <a href="http://resources.parsons.edu/resource/e3-materials-resource-center/" target="_blank">
+            
+            <div class="media-left">
+              <img src="/uploads/donghia.jpg" width="180px" alt="Donghia Materials Library"/>
+            </div>
+            
+            <div class="media-body">
+              <h6>Parsons</h6>
+              <h4>Donghia Materials Library</h4>
+
+              <p>The Donghia Materials Library is a resource that provides sample materials, evaluation tools, and in-person support to Parsons and New School students, faculty and design professionals nationwide.</p>
+
+            </div>
+          </a>
+
+        </li>
+
+      
+
+        <li class="media col-lg-6">
+          <a href="http://greensciencepolicy.org/topics/flame-retardants/" target="_blank">
+            
+            <div class="media-left">
+              <img src="/uploads/mattress.jpg" width="180px" alt="Flame Retardants"/>
+            </div>
+            
+            <div class="media-body">
+              <h6>GSPI</h6>
+              <h4>Flame Retardants</h4>
+
+              <p>Green Science Policy Institute is working to safely reduce use of and exposure to flame retardants and other hazardous chemicals in consumer and building products.</p>
+
+            </div>
+          </a>
+
+        </li>
+
+      
+
+        <li class="media col-lg-6">
+          <a href="http://greensciencepolicy.org/safer-sofa/" target="_blank">
+            
+            <div class="media-left">
+              <img src="/uploads/safer-sofa.jpg" width="180px" alt="Safer Sofa Foam Exchange"/>
+            </div>
+            
+            <div class="media-body">
+              <h6>GSPI</h6>
+              <h4>Safer Sofa Foam Exchange</h4>
+
+              <p>Through the Safer Sofa Foam Exchange, residents of the San Francisco Bay Area can replace couch cushions containing added flame retardants for new, safer foam free of those chemicals.</p>
+
+            </div>
+          </a>
+
+        </li>
+
+      
+
+        <li class="media col-lg-6">
+          <a href="http://www.hpd-collaborative.org/builder-2-0/" target="_blank">
+            
+            <div class="media-left">
+              <img src="/uploads/i-am-a-form2.jpg" width="180px" alt="Builder 2.0"/>
+            </div>
+            
+            <div class="media-body">
+              <h6>HPDC</h6>
+              <h4>Builder 2.0</h4>
+
+              <p>Builder 2.0 is a cloud-based information management tool that will help manufacturers report building product contents and other associated health information.</p>
+
+            </div>
+          </a>
+
+        </li>
+
+      
+
+        <li class="media col-lg-6">
+          <a href="https://www.pharosproject.net/volatiles/" target="_blank">
+            
+            <div class="media-left">
+              <img src="/uploads/paint.jpg" width="180px" alt="CompAIR"/>
+            </div>
+            
+            <div class="media-body">
+              <h6>HBN</h6>
+              <h4>CompAIR</h4>
+
+              <p>A feature of the Pharos Project, CompAIR provides the most accurate and reliable comparisons of the chemicals offgassing from paints, coatings, and similar products in order to measure their human health impacts.</p>
+
+            </div>
+          </a>
+
+        </li>
+
+      
+
+        <li class="media col-lg-6">
+          <a href="http://www.hpd-collaborative.org/hpd-2-0-standard/" target="_blank">
+            
+            <div class="media-left">
+              <img src="/uploads/HPD.jpg" width="180px" alt="HPD 2.0"/>
+            </div>
+            
+            <div class="media-body">
+              <h6>HPDC</h6>
+              <h4>HPD 2.0</h4>
+
+              <p>HPD Open Standard Version 2.0 was released in September 2015.  A continuing evolution of the original HPD Open Standard (1.0), it offers significant enhancements for harmonization with building industry standards and certifications, such as LEED, WELL, DECLARE, C2C and others.</p>
+
+            </div>
+          </a>
+
+        </li>
+
+      
+
+        <li class="media col-lg-6">
+          <a href="https://homefree.healthybuilding.net/" target="_blank">
+            
+            <div class="media-left">
+              <img src="/uploads/first-community-project-1585.jpg" width="180px" alt="HomeFree"/>
+            </div>
+            
+            <div class="media-body">
+              <h6>HBN</h6>
+              <h4>HomeFree</h4>
+
+              <p>Healthy Building Network is proud to introduce HomeFree, a national initiative supporting affordable housing leaders who are improving human health by using less toxic building materials.</p>
+
+            </div>
+          </a>
+
+        </li>
+
+      
       </ul>
     </div>
   </section>
 
   <section id="board" class="section-full js-section" data-title="Advisory Board">
     <div class="container">
-      <div class="lead">{{ site.collections[0].intro|markdownify }}</div>
+      <div class="lead"><p>The Healthy Affordable Materials Project is a four-part collaborative supported by a grant from <a href="http://jpbfoundation.org/">The JPB Foundation</a> and guided by a board of expert advisors.</p>
+</div>
       <div class="row">
-        {% for person in site.board %}
+        
           <div class="col-lg-4 col-md-6">
             <div class="person">
-              <h6>{{person.boardPosition}}</h6>
-              <a href="{{ person.link }}" target="_blank">
-                <h4>{{ person.title}}</h4>
+              <h6>Co-chair.,</h6>
+              <a href="https://www.healthybuilding.net/content/staff-and-board" target="_blank">
+                <h4>Gina Ciganik</h4>
               </a>
-              {{ person.content }}
+              <p>President, <em>Healthy Building Network</em></p>
+
             </div>
           </div>
-          {% endfor %}
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="person">
+              <h6>Co-chair</h6>
+              <a href="http://www.healthymaterialslab.org/team#/alison-mears-1/" target="_blank">
+                <h4>Alison Mears</h4>
+              </a>
+              <p>Director, Healthy Materials Lab, <em>Parsons School of Design</em></p>
+
+            </div>
+          </div>
+          
       </div>
       <h6>Advisory Committee</h6>
-      <p class="lead">{{site.collections[0].advisoryCommittee}}</p>
-      <p class="lead"><i>{{site.collections[0].comingSoon}}</i></p>
+      <p class="lead">Michael Bodaken, President of Bodaken & Associates
+<br/><br/>
+Lisa Britton, Director of Sales & Marketing and Sustainability Champion at Industrial Louvers, Inc.  
+<br/><br/>
+Rolf Halden, Ph.D., P.E., Professor in the School of Sustainable Engineering and the Built Environment at Arizona State University  
+<br/><br/>
+Seandra Pope, President & CEO of Rooted Consulting Group  
+<br/><br/>
+Jess Blanch, Design Associate and Enterprise Rose Architectural Fellow, Capitol Hill Housing
+<br/><br/>
+Catherine Bobenhausen, Senior Consultant at Colden Corporation
+<br/><br/>
+Joanna Frank, President and CEO of Center for Active Design
+<br/><br/>
+Dr. Maida Galvez, Associate Professor of Environmental Medicine, Public Health, and Pediatrics, Icahn School of Medicine at Mount Sinai
+<br/><br/>
+Gretta Goldenman, Director at Millieu Ltd
+<br/><br/>
+Jean Hansen, FIIDA, LEED Fellow, CID, EDAC, AAHID, Sustainable Principal, HDR
+<br/><br/>
+Martin Mulvihill, Managing Partner and Co-Founder at Safer Made, and Senior Advisor and Board Member for Berkeley Center for Green Chemistry
+<br/><br/>
+Becky Schaaf, Senior Vice President, Energy at SAHF
+<br/><br/>
+Joel Towers, Executive Dean of Parsons School of Design at The New School and Director of Tishman Environmental Design Center
+</p>
+      <p class="lead"><i></i></p>
     </div>
   </section>
 
@@ -107,19 +500,56 @@ layout: default
     <div class="container">
 
       <ul class="list-unstyled row">
-      {% for post in site.posts %}
+      
 
         <li class="col-md-6">
-          <a href="{{ post.link }}" target="_blank">
-            <h6>{{ post.date | date: "%B %-d, %Y" }} &mdash; <span>{{ post.partner}}</span></h6>
-            <h3>{{ post.title}}</h3>
+          <a href="http://greensciencepolicy.org/lead-in-water-action-kits-now-available/" target="_blank">
+            <h6>March 29, 2016 &mdash; <span>GSPI</span></h6>
+            <h3>Lead in Water Action Kits Now Available</h3>
           </a>
         </li>
 
-      {% endfor %}
+      
+
+        <li class="col-md-6">
+          <a href="https://www.healthybuilding.net/news/2016/02/18/east-of-flint-one-company-defiantly-continues-to-produce-lead-pigments" target="_blank">
+            <h6>March 27, 2016 &mdash; <span>HBN</span></h6>
+            <h3>East of Flint, One Company Defiantly Continues To Produce Lead Pigments</h3>
+          </a>
+        </li>
+
+      
       </ul>
     </div>
   </section> -->
 
 
 </div>
+
+
+  </main>
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  <script src="/scripts/modernizr-custom.js"></script>
+
+  <script src="/scripts/fixedsticky.js"></script>
+
+  <script src="/scripts/scroll.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-76471248-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</body>
+</html>
