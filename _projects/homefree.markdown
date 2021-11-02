@@ -6,4 +6,4 @@ image: "/uploads/first-community-project-1585.jpg"
 link: https://homefree.healthybuilding.net/
 ---
 
-Healthy Building Network is proud to introduce HomeFree, a national initiative supporting affordable housing leaders who are improving human health by using less toxic building materials.
+HomeFree is a national initiative supporting leaders in affordable housing who are improving human health by using less toxic building materials. 
