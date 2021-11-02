@@ -1,6 +1,7 @@
 ---
 title: Safer Sofa Foam Exchange
 date: 2016-03-29 11:28:00 -04:00
+published: false
 position: 3
 partner: GSPI
 image: "/uploads/safer-sofa.jpg"
