@@ -2,6 +2,7 @@
 title: Elegant + Healthier Affordable Housing
 date: 2021-11-02 17:05:00 -04:00
 partner: Parsons
+image: "/uploads/2020_MOMENTUM_5.jpeg"
 link: https://healthymaterialslab.org/projects/determined-by-design
 ---
 
